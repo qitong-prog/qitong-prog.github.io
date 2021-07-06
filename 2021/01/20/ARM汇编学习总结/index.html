@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://example.com">
+    <!--SEO-->
+
+<meta name="keywords" content="汇编" />
+
+
+<meta name="description" content="
+
+1. Android中ARM学习思路
+明白安卓与ARM处理器的关系
+​        Android嵌入式智能系统基于Linux内核，嵌入式系统Linux是基于ARM平台。Android程序..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    ARM汇编学习总结 |
+    
+    Blog
+</title>
+
+<link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+
+
+<link rel="icon" href="/roguerabbit.png">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    https://hexo-theme-snippet-1251680922.cos.ap-beijing.myqcloud.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='七筒'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://example.com">
+                        Blog</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/about"><i class="fa "></i>
+                                关于我</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/PY"><i class="fa "></i>
+                                友链</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="ARM汇编学习总结">
+            
+            ARM汇编学习总结
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/%E6%B1%87%E7%BC%96/" rel="tag">汇编</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2021/01/20</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <span id="more"></span>
+
+<h2 id="1-Android中ARM学习思路"><a href="#1-Android中ARM学习思路" class="headerlink" title="1. Android中ARM学习思路"></a>1. Android中ARM学习思路</h2><ul>
+<li><p>明白安卓与ARM处理器的关系</p>
+<p>​        Android嵌入式智能系统基于Linux内核，嵌入式系统Linux是基于ARM平台。Android程序运行基于Linux系统，并且处理器基于ARM。</p>
+</li>
+<li><p>ARM汇编语言程序结构</p>
+</li>
+<li><p>ARM指令</p>
+</li>
+<li><p>ARM处理器的寻址方式</p>
+</li>
+<li><p>ARM指令机器码</p>
+</li>
+</ul>
+<h2 id="2-ARM处理器"><a href="#2-ARM处理器" class="headerlink" title="2. ARM处理器"></a>2. ARM处理器</h2><p>​        ARM是一个<strong>RISC</strong>（精简指令集）处理器。它拥有一套精简的指令集以及比CISC处理器更多的通用寄存器。<strong>ARM指令只处理寄存器中的数据</strong>，并使用了load/store结构访问存储器，也就是<strong>只有load/store指令可以访问存储器</strong>。ARM有两种运行模式（可以类比x86的实模式和保护模式），ARM模式和Thumb模式。Thumb指令可以是2或4字节的。</p>
+<p>​        如果要加某个内存地址中保存的值，至少需要三种类型的指令（load指令、加法指令和store指令）。说明：需要使用**<code>load</code>指令将指定地址内存中的值加载到寄存器中<strong>，然后使用</strong>加法指令增加寄存器中的值<strong>，然后用</strong><code>store</code>指令将寄存器中的值写回内存**。</p>
+<h2 id="3-RISC-精简指令集-的优劣"><a href="#3-RISC-精简指令集-的优劣" class="headerlink" title="3. RISC(精简指令集)的优劣"></a>3. RISC(精简指令集)的优劣</h2><ul>
+<li>优</li>
+</ul>
+<p>可以被更快的执行。（原因：RISC处理器通过引入<strong>流水线机制</strong>，减少每个指令的占用CPU的<strong>时钟周期</strong>来缩短执行时间）。</p>
+<p><strong>注：</strong></p>
+<p>时钟周期：时钟周期也成为振荡周期，定义为时钟频率的倒数。<strong>时钟周期是计算机中最基本的、最小的时间单位</strong>，CPU仅完成一个最基本的动作。时钟周期是一个时间的量。时钟周期表示了SDRAM所能运行的最高频率。<strong>更小的时钟周期就意味着更高的工作效率</strong>。</p>
+<p>流水线：流水线技术是指在程序执行时，多条指令重叠进行操作的一种任务分解术。<strong>把一个任务分解成若干顺序执行的子任务</strong>，不同的子任务由不同的执行机构来负责执行，而这些<strong>执行机构可以同时并行工作</strong>。</p>
+<ul>
+<li>劣</li>
+</ul>
+<p>较少的指令增加了软件（实际上是编译器）的复杂性。</p>
+<h2 id="4-RISC-CISC的特点（了解）"><a href="#4-RISC-CISC的特点（了解）" class="headerlink" title="4. RISC/CISC的特点（了解）"></a>4. RISC/CISC的特点（了解）</h2><h3 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h3><ul>
+<li><p><strong>CISC</strong></p>
+<p>​    最初为了提高操作系统效率，选择向指令系统中添加更多、更复杂的指令来实现，导致指令集越来越大。这种类型的计算机就称为复杂指令集计算机。</p>
+</li>
+<li><p><strong>RISC</strong></p>
+<p>​    对指令数据和寻址方式做精简，指令的指令周期相同，采用流水线技术，指令并行执行程度更好，这类是精简指令集计算机。</p>
+</li>
+</ul>
+<h3 id="4-2-CISC主要特点"><a href="#4-2-CISC主要特点" class="headerlink" title="4.2 CISC主要特点"></a>4.2 CISC主要特点</h3><ul>
+<li>指令数量多（100-250条）</li>
+<li>指令使用频率相差悬殊（最常使用的是较简单的指令）</li>
+<li>支持很多种寻址方式（通常为5-20种）</li>
+<li>变长的指令（指令的长度不固定，变长的指令增加指令译码电路的复杂性）</li>
+<li>指令可以对存储单元中数据直接进行处理（典型的CISC处理器通常都有指令能够直接对内存单元中的数据进行处理，执行速度较慢）</li>
+</ul>
+<h3 id="4-3-RISC主要特点"><a href="#4-3-RISC主要特点" class="headerlink" title="4.3 RISC主要特点"></a>4.3 RISC主要特点</h3><ul>
+<li>指令数量少（优先选取使用频率高的一些简单指令以及常用指令，避免使用复杂指令）</li>
+<li>指令的寻址方式少（只支持寄存器寻址方式、立即数寻址方式以及相对寻址方式）</li>
+<li>指令长度固定，指令格式种类少</li>
+<li>只提供load/store指令访问存储器</li>
+<li>以硬布线逻辑控制为主</li>
+<li>单周期指令执行</li>
+</ul>
+<p><strong>注：</strong></p>
+<p><strong>硬布线</strong>：硬布线控制器是早期设计计算机的一种方法。硬布线控制器是<strong>将控制部件做成生产专门固定时序控制信号的逻辑电路</strong>，产生各种控制信号，因而又称为组合逻辑控制器。这种逻辑电路以<strong>使用最少原件和取得最高操作速度为设计目标</strong>，因为该逻辑电路又门电路和触发器构成的发杂树型网络，所以称为硬布线控制器。</p>
+<h2 id="5-CISC和RISC对比表"><a href="#5-CISC和RISC对比表" class="headerlink" title="5. CISC和RISC对比表"></a>5. CISC和RISC对比表</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>CISC</th>
+<th>RISC</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>指令条数</strong></td>
+<td>多</td>
+<td>只选取最常见的指令</td>
+</tr>
+<tr>
+<td><strong>指令复杂度</strong></td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td><strong>指令长度</strong></td>
+<td>变化</td>
+<td>短、固定</td>
+</tr>
+<tr>
+<td><strong>指令执行周期</strong></td>
+<td>随指令变化大</td>
+<td>大多在一个机器同期完成</td>
+</tr>
+<tr>
+<td><strong>指令格式</strong></td>
+<td>复杂</td>
+<td>简单</td>
+</tr>
+<tr>
+<td><strong>寻址方式</strong></td>
+<td>多</td>
+<td>极少</td>
+</tr>
+<tr>
+<td><strong>涉及访问主存（主存储器）指令</strong></td>
+<td>多</td>
+<td>极小，大部分只有两条存指令</td>
+</tr>
+<tr>
+<td><strong>通用寄存器数量</strong></td>
+<td>一般</td>
+<td>大量</td>
+</tr>
+<tr>
+<td><strong>译码方式</strong></td>
+<td>微程序控制</td>
+<td>硬件电路</td>
+</tr>
+<tr>
+<td><strong>对编译系统要求</strong></td>
+<td>低</td>
+<td>高</td>
+</tr>
+</tbody></table>
+<h2 id="6-ARM和x86-x64的区别"><a href="#6-ARM和x86-x64的区别" class="headerlink" title="6. ARM和x86/x64的区别"></a>6. ARM和x86/x64的区别</h2><ul>
+<li>ARM中大多数指令可以用于分支跳转的条件判断。</li>
+<li>Intel的x86/x64系列CPU是小端序的。</li>
+<li>ARM架构在ARMv3知前是最小端序的之后ARM处理器提供一个配置项，可以通过配置在大端和小端之间切换。</li>
+</ul>
+<p><strong>注：</strong></p>
+<p><strong>大端模式：</strong>是指<strong>数据的高字节保存在内存的低地址中，而数据的低字节保存在内存的高地址中</strong>，这样的存储模式类似于把数据当作字符串顺序处理：<strong>地址由小向大增加，数据从高位往低位放</strong>。</p>
+<p><strong>小端模式：</strong>是指<strong>数据的高字节保存在内存的高地址中，而数据的低字节保存在内存的低地址中</strong>，这种寸处模式将地址的高低和数据位权有效地结合，<strong>高地址部分权值高，低地址部分权值低</strong>。</p>
+<h2 id="7-ARM版本"><a href="#7-ARM版本" class="headerlink" title="7.ARM版本"></a>7.ARM版本</h2><table>
+<thead>
+<tr>
+<th>内核（架构）版本</th>
+<th>处理器版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ARMv1</td>
+<td>ARM1</td>
+</tr>
+<tr>
+<td>ARMv2</td>
+<td>ARM2、ARM3</td>
+</tr>
+<tr>
+<td>ARMv3</td>
+<td>ARM6、ARM7</td>
+</tr>
+<tr>
+<td>ARMv4</td>
+<td>StrongARM、ARM7TDMI、ARM9TDMI</td>
+</tr>
+<tr>
+<td>ARMv5</td>
+<td>ARM7EJ、ARM9E、ARM10E、XScale</td>
+</tr>
+<tr>
+<td>ARMv6</td>
+<td>ARM11、ARM Cortex-M</td>
+</tr>
+<tr>
+<td>ARMv7</td>
+<td>ARM Cortex-A、ARM Cortex-M、ARM Cortex-R</td>
+</tr>
+<tr>
+<td>ARMv8</td>
+<td>ARM Cortex-A30、ARM Cortex-A50、ARM Cortex-A70</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">七筒</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="pre-post btn btn-default" title='知识总结'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            知识总结</span>
+    </a>
+    
+    
+    <a href="/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/" class="next-post btn btn-default" title='游戏安全学习02'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            游戏安全学习02</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+
+<div id="vcomments" class="valine"></div>
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+<script>
+new Valine({
+    av: AV,
+    el: '#vcomments',
+    appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+    appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+    placeholder: '说点什么吧',
+    notify: false,
+    verify: true,
+    avatar: 'mm',
+    meta: 'nick,mail'.split(','),
+    pageSize: '10',
+    path: window.location.pathname,
+    lang: 'zh-cn'.toLowerCase()
+})
+</script>
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            Table of Contents
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Android%E4%B8%ADARM%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="toc-text">1. Android中ARM学习思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-ARM%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-text">2. ARM处理器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-RISC-%E7%B2%BE%E7%AE%80%E6%8C%87%E4%BB%A4%E9%9B%86-%E7%9A%84%E4%BC%98%E5%8A%A3"><span class="toc-text">3. RISC(精简指令集)的优劣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-RISC-CISC%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">4. RISC&#x2F;CISC的特点（了解）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E7%AE%80%E4%BB%8B"><span class="toc-text">4.1 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-CISC%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="toc-text">4.2 CISC主要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-RISC%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="toc-text">4.3 RISC主要特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-CISC%E5%92%8CRISC%E5%AF%B9%E6%AF%94%E8%A1%A8"><span class="toc-text">5. CISC和RISC对比表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-ARM%E5%92%8Cx86-x64%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">6. ARM和x86&#x2F;x64的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-ARM%E7%89%88%E6%9C%AC"><span class="toc-text">7.ARM版本</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+</body>
+</html>
