@@ -241,7 +241,7 @@ pre {
   line-height: 0;
   height: 180px;
   width: 100%;
-  background: rgb(0, 0, 0) url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg);
+  background: rgb(255, 255, 255) url(../img/head-img.png);
   background-repeat: repeat;
   overflow: hidden;
 }
@@ -268,15 +268,15 @@ pre {
   padding-top: 15px;
 }
 .main-header .main-header-box .branding h2 {
-  font-family: "STXingkai", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif;
+  font-family: "STCaiyun", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif;
   width: 320px;
   margin: 0 auto;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #ffffff;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  background-image: -webkit-linear-gradient(left, #ffffff, #e77575 25%, #ffffff 50%, #ffffff 75%, #ffffff) !important;
+  background-image: -webkit-linear-gradient(left, #ee8899, #ee8899 25%, #ee8899 50%, #ee8899 75%, #ee8899) !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-background-clip: text !important;
   background-size: 200% 100% !important;
@@ -1260,7 +1260,7 @@ pre {
   width: 100%;
   padding: 0 20px;
   margin: 20px auto;
-  background: url(../img/timeline.gif) repeat-y 207px 0;
+  background: url(../img/q.png) repeat-y 207px 0;
   overflow: hidden;
 }
 .timeline h2 {
@@ -1271,7 +1271,7 @@ pre {
   font-weight: bold;
   padding-left: 75px;
   margin-bottom: 25px;
-  background: url(../img/timeline-clock.gif) #fff no-repeat 165px 0;
+  /* background: url(../img/timeline-clock.gif) #fff no-repeat 165px 0; */
 }
 .timeline h2 img {
   vertical-align: -5px;
@@ -1282,7 +1282,7 @@ pre {
   padding: 0;
 }
 .timeline ul li {
-  background: url(../img/timeline-dot.gif) no-repeat 180px 5px;
+  /* background: url(../img/timeline-dot.gif) no-repeat 180px 5px; */
   padding-bottom: 20px;
   zoom: 1;
   text-overflow: ellipsis;
