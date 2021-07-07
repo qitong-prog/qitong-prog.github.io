@@ -172,25 +172,8 @@
       </tags>
   </entry>
   <entry>
-    <title>日记</title>
-    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
-<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
-<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
-<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Eclipse NDK环境搭建</title>
-    <url>/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <title>EclipseNDK环境搭建</title>
+    <url>/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<span id="more"></span>
 
 <h3 id="1-需要下载的内容"><a href="#1-需要下载的内容" class="headerlink" title="1. 需要下载的内容"></a>1. 需要下载的内容</h3><ul>
@@ -198,62 +181,62 @@
 </li>
 <li><p><a href="https://www.androiddevtools.cn/">SDK\NDK\ADT</a></p>
 <p>下载时CTRL+F搜索下载内容asset_img即可，选择符合自己电脑版本</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224620323.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224620323.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122235422234.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122235422234.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224838466.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224838466.png" class="" title="image-20210121224620323.png"></li>
 </ul>
-<h3 id="2-安装下载Eclipse"><a href="#2-安装下载Eclipse" class="headerlink" title="2. 安装下载Eclipse"></a>2. 安装下载Eclipse</h3><h4 id="2-1-进入网址点击Download下载即可"><a href="#2-1-进入网址点击Download下载即可" class="headerlink" title="2.1  进入网址点击Download下载即可"></a>2.1  进入网址点击Download下载即可</h4><p>​        <img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222613297.png" class="" title="image-20210121224620323.png"></p>
-<p>​        <img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222525836.png" class="" title="image-20210121224620323.png"></p>
+<h3 id="2-安装下载Eclipse"><a href="#2-安装下载Eclipse" class="headerlink" title="2. 安装下载Eclipse"></a>2. 安装下载Eclipse</h3><h4 id="2-1-进入网址点击Download下载即可"><a href="#2-1-进入网址点击Download下载即可" class="headerlink" title="2.1  进入网址点击Download下载即可"></a>2.1  进入网址点击Download下载即可</h4><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222613297.png" class="" title="image-20210121224620323.png"></p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222525836.png" class="" title="image-20210121224620323.png"></p>
 <h4 id="2-2-安装Eclipse"><a href="#2-2-安装Eclipse" class="headerlink" title="2.2 安装Eclipse"></a>2.2 安装Eclipse</h4><ul>
 <li><p>双击安装程序，出现如下图所示界面选择<code>Eclipse IDE forJava Developers</code>。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222935038.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222935038.png" class="" title="image-20210121224620323.png"></li>
 <li><p>选择Java环境以及eclipse安装的位置，点击第一行文件夹图标选择安装Java环境。①为本机环境，②为网上下载。如果本机有环境则可以选择本地环境地址，此处我选择网上安装JRE15.0.1。第二个文件夹图标选择你要下载安装到哪个位置。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223520833.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223520833.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223716177.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223716177.png" class="" title="image-20210121224620323.png"></li>
 <li><p>出现如下界面选择accept</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223917465.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223917465.png" class="" title="image-20210121224620323.png"></li>
 <li><p>下载完成后先择launch启动eclipse</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224057458.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224057458.png" class="" title="image-20210121224620323.png"></li>
 <li><p>启动eclipse后出现如下图所示图标，选择项目存储位置。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224338417.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224338417.png" class="" title="image-20210121224620323.png"></li>
 </ul>
 <h3 id="3-给Eclipse安装ADTAndroid开发环境"><a href="#3-给Eclipse安装ADTAndroid开发环境" class="headerlink" title="3. 给Eclipse安装ADTAndroid开发环境"></a>3. 给Eclipse安装ADTAndroid开发环境</h3><h4 id="3-1-安装ADT"><a href="#3-1-安装ADT" class="headerlink" title="3.1 安装ADT"></a>3.1 安装ADT</h4><ul>
 <li><p>启动eclipse后点击<code>help</code>/<code>Install New Software</code></p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121225842829.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121225842829.png" class="" title="image-20210121224620323.png"></li>
 <li><p>点击Add之后出现Add Repository界面Name命名为ADT Plugin，点击Archive选择刚刚下载的ADT zip压缩包</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230234439.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230234439.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230540887.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230540887.png" class="" title="image-20210121224620323.png"></li>
 <li><p>选择完成后点击<code>Add</code>，选择需要下载添加的资源点击<code>两次Next</code>之后再点击选择<code>I accept the terms of the license agreements</code> 再点击<code>Finish</code>。等待下载完成即可。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230643416.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230643416.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230726932.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230726932.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230959219.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230959219.png" class="" title="image-20210121224620323.png"></li>
 <li><p>**<code>注意 ：</code>**这里要查看右下角下载100%再退出重启，否则会下载失败。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121231054795.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121231054795.png" class="" title="image-20210121224620323.png"></li>
 <li><p>如果安装的很慢，可以安装时可以不选中这个复选框</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001532176.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001532176.png" class="" title="image-20210121224620323.png"></li>
 </ul>
 <h4 id="3-2-Eclipse配置SDK"><a href="#3-2-Eclipse配置SDK" class="headerlink" title="3.2 Eclipse配置SDK"></a>3.2 Eclipse配置SDK</h4><ul>
 <li><p>安装完成后重启Eclipse，点击Windows/Prefrences后则会出现一个Android选项的地方。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001846060.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001846060.png" class="" title="image-20210121224620323.png"></li>
 <li><p>打开之后看见Android选项，点击进入配置你的sdk环境，选择好你sdk路径后点击Apply and Close关闭即可。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002047874.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002047874.png" class="" title="image-20210121224620323.png"></li>
 </ul>
 <p>**<code>注：</code>**如果添加SDK路径如下报错，在你的sdk环境中找到android-sdk-windows\tools\lib目录下plugin.prop文件，把其中的plugin版本更改为与你的ADT版本一致即可。</p>
-<p>​        <img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122005607311.png" class="" title="image-20210121224620323.png"></p>
-<p>​        <img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122010017071.png" class="" title="image-20210121224620323.png"></p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122005607311.png" class="" title="image-20210121224620323.png"></p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122010017071.png" class="" title="image-20210121224620323.png"></p>
 <h4 id="3-3-Eclipse配置NDK"><a href="#3-3-Eclipse配置NDK" class="headerlink" title="3.3 Eclipse配置NDK"></a>3.3 Eclipse配置NDK</h4><ul>
 <li><p>同样在Prefrences/Android路径下找到NDK，然后点击找到你的ndk的路径选中，点击Apply and Close结束配置。这样你的NDK就配置成功了。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002449680.png" class="" title="image-20210121224620323.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002449680.png" class="" title="image-20210121224620323.png"></li>
 <li><p><code>注：</code>如果在NDK选取路径时报错Not valid NDK directory,则在该路径下创建一个ndk-build文件即可。</p>
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004355122.png" class="" title="image-20210121224620323.png">
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004355122.png" class="" title="image-20210121224620323.png">
 
-<img src="/2021/01/22/EclipseNDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004504866.png" class="" title="image-20210122004504866.png"></li>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004504866.png" class="" title="image-20210122004504866.png"></li>
 </ul>
 ]]></content>
       <categories>
@@ -305,6 +288,23 @@
       </categories>
       <tags>
         <tag>手游安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
+<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
+<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
+<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
