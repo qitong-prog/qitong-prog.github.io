@@ -264,50 +264,6 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏安全学习01</title>
-    <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
-<h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
-<p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p>
-<p>​        <strong>注入手段</strong>：①<code>Android</code>：<code>Zygote</code>注入、<code>ptrace</code>注入技术 ；②<code>iOS</code>：利用<code>Cydia</code>框架注入<code>dylib</code>模块。</p>
-<p>​        <strong>实现步骤</strong>：外挂功能模块在被注入游戏进程后，会执行Hook操作实现外挂功能呢。制作外挂的过程中首先要你想分析游戏代码逻辑，找到一些游戏功能函数的地址，然后在外挂功能模块中通过Hook操作去挂钩相应的函数。</p>
-<p>​        底层汇编中，Hook操作可以理解为在特定的代码地址，增加跳转指令跳转到外挂制作者自定义的函数中（当前有封装的第三方库支持Hook操作：<code>substrace</code>等）</p>
-<p>​        <strong>举例说明</strong>：回调怪物的扣血函数实现秒怪；屏蔽玩家扣血函数实现无敌</p>
-<h3 id="1-2-通用工具"><a href="#1-2-通用工具" class="headerlink" title="1.2 通用工具"></a>1.2 通用工具</h3><p>​        通用工具是实现外挂跨游戏的通用外挂功能，他具体与平台和游戏引擎相关</p>
-<ul>
-<li><p><strong>内存修改器</strong></p>
-<p>​        本质是实现对指定进程的内存数据的读写。技术关键点主要在如何读写游戏的内存数据。<strong>实现方式</strong>：<strong>a.</strong> 与专用插件类似，注入一个通用功能模块到游戏进程中，根据本地<code>Socket</code>接受操作(搜索修改)，直接遍历内存等方式实现。<strong>b.</strong> 根据平台加载机制取巧实现，例如在Android平台下通过<code>/proc/[pid]/maps</code>可读写游戏的内存镜像。</p>
-</li>
-<li><p><strong>变速器</strong></p>
-<p>​        影响游戏的事件度量。游戏通常需要以帧为单位播放画面，在播放画面的过程中计算每帧动画播放所需的事件，<strong>游戏需要调用C库函数获取系统事件以供计算每帧的更新</strong>。游戏加速器可以针对不同的引擎修改不同的<code>Libc.so</code>的相关函数，例如：<code>gettimeofday</code>、<code>clock_getime</code>。修改方式同样为Hook实现，针对<code>Libc.so</code>模块的导出函数可利用导入表Hook的方式。</p>
-</li>
-<li><p><strong>按键精灵</strong></p>
-<p>​        通常调用系统<code>API</code>来发送特定操作序列，模拟用户按键。此类外挂的实现与系统的相关性较大(实现通过相应系统的<code>API</code>发送操作事件来模拟全局按键)。<strong>实现方式</strong>：Android上可通过<code>Instrumentation</code>接口的<code>sendPointerSync</code>函数实现，也可以通过具备Root权限的驱动程序调用<code>Runtime.getRuntime().exec()</code>执行<code>sendevent</code>等命令。</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>模拟器</strong></p>
-<p>​        模拟器可以让玩家咋PC上运行手游。核心实现规则是基于<code>VirtualBox</code>模拟Android系统，可以直接模拟<code>X86</code>架构的Android系统。</p>
-</li>
-<li><p>抓包工具</p>
-</li>
-</ul>
-<p>​        <strong>本质是网络数据包编辑器。</strong>一类的实现方式是基于硬件（例如：让网卡处于混乱模式，即可拦截数据包）。另一类是通过Hook，针对<code>send</code>和<code>recv</code>类函数进行拦截获取网络数据包。</p>
-<h2 id="2-破解版外挂的实现原理"><a href="#2-破解版外挂的实现原理" class="headerlink" title="2. 破解版外挂的实现原理"></a>2. 破解版外挂的实现原理</h2><p>​        破解版外挂是预先静态修改后的独立游戏客户端。可分为两种：</p>
-<p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p>
-<h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p>
-<h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>手游安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏安全学习02</title>
     <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
     <content><![CDATA[<span id="more"></span>
@@ -402,6 +358,50 @@
       </categories>
       <tags>
         <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏安全学习01</title>
+    <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
+<h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
+<p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p>
+<p>​        <strong>注入手段</strong>：①<code>Android</code>：<code>Zygote</code>注入、<code>ptrace</code>注入技术 ；②<code>iOS</code>：利用<code>Cydia</code>框架注入<code>dylib</code>模块。</p>
+<p>​        <strong>实现步骤</strong>：外挂功能模块在被注入游戏进程后，会执行Hook操作实现外挂功能呢。制作外挂的过程中首先要你想分析游戏代码逻辑，找到一些游戏功能函数的地址，然后在外挂功能模块中通过Hook操作去挂钩相应的函数。</p>
+<p>​        底层汇编中，Hook操作可以理解为在特定的代码地址，增加跳转指令跳转到外挂制作者自定义的函数中（当前有封装的第三方库支持Hook操作：<code>substrace</code>等）</p>
+<p>​        <strong>举例说明</strong>：回调怪物的扣血函数实现秒怪；屏蔽玩家扣血函数实现无敌</p>
+<h3 id="1-2-通用工具"><a href="#1-2-通用工具" class="headerlink" title="1.2 通用工具"></a>1.2 通用工具</h3><p>​        通用工具是实现外挂跨游戏的通用外挂功能，他具体与平台和游戏引擎相关</p>
+<ul>
+<li><p><strong>内存修改器</strong></p>
+<p>​        本质是实现对指定进程的内存数据的读写。技术关键点主要在如何读写游戏的内存数据。<strong>实现方式</strong>：<strong>a.</strong> 与专用插件类似，注入一个通用功能模块到游戏进程中，根据本地<code>Socket</code>接受操作(搜索修改)，直接遍历内存等方式实现。<strong>b.</strong> 根据平台加载机制取巧实现，例如在Android平台下通过<code>/proc/[pid]/maps</code>可读写游戏的内存镜像。</p>
+</li>
+<li><p><strong>变速器</strong></p>
+<p>​        影响游戏的事件度量。游戏通常需要以帧为单位播放画面，在播放画面的过程中计算每帧动画播放所需的事件，<strong>游戏需要调用C库函数获取系统事件以供计算每帧的更新</strong>。游戏加速器可以针对不同的引擎修改不同的<code>Libc.so</code>的相关函数，例如：<code>gettimeofday</code>、<code>clock_getime</code>。修改方式同样为Hook实现，针对<code>Libc.so</code>模块的导出函数可利用导入表Hook的方式。</p>
+</li>
+<li><p><strong>按键精灵</strong></p>
+<p>​        通常调用系统<code>API</code>来发送特定操作序列，模拟用户按键。此类外挂的实现与系统的相关性较大(实现通过相应系统的<code>API</code>发送操作事件来模拟全局按键)。<strong>实现方式</strong>：Android上可通过<code>Instrumentation</code>接口的<code>sendPointerSync</code>函数实现，也可以通过具备Root权限的驱动程序调用<code>Runtime.getRuntime().exec()</code>执行<code>sendevent</code>等命令。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>模拟器</strong></p>
+<p>​        模拟器可以让玩家咋PC上运行手游。核心实现规则是基于<code>VirtualBox</code>模拟Android系统，可以直接模拟<code>X86</code>架构的Android系统。</p>
+</li>
+<li><p>抓包工具</p>
+</li>
+</ul>
+<p>​        <strong>本质是网络数据包编辑器。</strong>一类的实现方式是基于硬件（例如：让网卡处于混乱模式，即可拦截数据包）。另一类是通过Hook，针对<code>send</code>和<code>recv</code>类函数进行拦截获取网络数据包。</p>
+<h2 id="2-破解版外挂的实现原理"><a href="#2-破解版外挂的实现原理" class="headerlink" title="2. 破解版外挂的实现原理"></a>2. 破解版外挂的实现原理</h2><p>​        破解版外挂是预先静态修改后的独立游戏客户端。可分为两种：</p>
+<p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p>
+<h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p>
+<h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>手游安全</tag>
       </tags>
   </entry>
 </search>
