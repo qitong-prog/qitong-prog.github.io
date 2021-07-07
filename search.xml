@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>日记</title>
-    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
-<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
-<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
-<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ARM汇编学习总结</title>
     <url>/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<span id="more"></span>
@@ -189,50 +172,6 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏安全学习01</title>
-    <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
-<h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
-<p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p>
-<p>​        <strong>注入手段</strong>：①<code>Android</code>：<code>Zygote</code>注入、<code>ptrace</code>注入技术 ；②<code>iOS</code>：利用<code>Cydia</code>框架注入<code>dylib</code>模块。</p>
-<p>​        <strong>实现步骤</strong>：外挂功能模块在被注入游戏进程后，会执行Hook操作实现外挂功能呢。制作外挂的过程中首先要你想分析游戏代码逻辑，找到一些游戏功能函数的地址，然后在外挂功能模块中通过Hook操作去挂钩相应的函数。</p>
-<p>​        底层汇编中，Hook操作可以理解为在特定的代码地址，增加跳转指令跳转到外挂制作者自定义的函数中（当前有封装的第三方库支持Hook操作：<code>substrace</code>等）</p>
-<p>​        <strong>举例说明</strong>：回调怪物的扣血函数实现秒怪；屏蔽玩家扣血函数实现无敌</p>
-<h3 id="1-2-通用工具"><a href="#1-2-通用工具" class="headerlink" title="1.2 通用工具"></a>1.2 通用工具</h3><p>​        通用工具是实现外挂跨游戏的通用外挂功能，他具体与平台和游戏引擎相关</p>
-<ul>
-<li><p><strong>内存修改器</strong></p>
-<p>​        本质是实现对指定进程的内存数据的读写。技术关键点主要在如何读写游戏的内存数据。<strong>实现方式</strong>：<strong>a.</strong> 与专用插件类似，注入一个通用功能模块到游戏进程中，根据本地<code>Socket</code>接受操作(搜索修改)，直接遍历内存等方式实现。<strong>b.</strong> 根据平台加载机制取巧实现，例如在Android平台下通过<code>/proc/[pid]/maps</code>可读写游戏的内存镜像。</p>
-</li>
-<li><p><strong>变速器</strong></p>
-<p>​        影响游戏的事件度量。游戏通常需要以帧为单位播放画面，在播放画面的过程中计算每帧动画播放所需的事件，<strong>游戏需要调用C库函数获取系统事件以供计算每帧的更新</strong>。游戏加速器可以针对不同的引擎修改不同的<code>Libc.so</code>的相关函数，例如：<code>gettimeofday</code>、<code>clock_getime</code>。修改方式同样为Hook实现，针对<code>Libc.so</code>模块的导出函数可利用导入表Hook的方式。</p>
-</li>
-<li><p><strong>按键精灵</strong></p>
-<p>​        通常调用系统<code>API</code>来发送特定操作序列，模拟用户按键。此类外挂的实现与系统的相关性较大(实现通过相应系统的<code>API</code>发送操作事件来模拟全局按键)。<strong>实现方式</strong>：Android上可通过<code>Instrumentation</code>接口的<code>sendPointerSync</code>函数实现，也可以通过具备Root权限的驱动程序调用<code>Runtime.getRuntime().exec()</code>执行<code>sendevent</code>等命令。</p>
-</li>
-</ul>
-<ul>
-<li><p><strong>模拟器</strong></p>
-<p>​        模拟器可以让玩家咋PC上运行手游。核心实现规则是基于<code>VirtualBox</code>模拟Android系统，可以直接模拟<code>X86</code>架构的Android系统。</p>
-</li>
-<li><p>抓包工具</p>
-</li>
-</ul>
-<p>​        <strong>本质是网络数据包编辑器。</strong>一类的实现方式是基于硬件（例如：让网卡处于混乱模式，即可拦截数据包）。另一类是通过Hook，针对<code>send</code>和<code>recv</code>类函数进行拦截获取网络数据包。</p>
-<h2 id="2-破解版外挂的实现原理"><a href="#2-破解版外挂的实现原理" class="headerlink" title="2. 破解版外挂的实现原理"></a>2. 破解版外挂的实现原理</h2><p>​        破解版外挂是预先静态修改后的独立游戏客户端。可分为两种：</p>
-<p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p>
-<h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p>
-<h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>手游安全</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Eclipse NDK环境搭建</title>
     <url>/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<span id="more"></span>
@@ -308,6 +247,96 @@
       </tags>
   </entry>
   <entry>
+    <title>日记</title>
+    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
+<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
+<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
+<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏安全学习01</title>
+    <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
+<h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
+<p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p>
+<p>​        <strong>注入手段</strong>：①<code>Android</code>：<code>Zygote</code>注入、<code>ptrace</code>注入技术 ；②<code>iOS</code>：利用<code>Cydia</code>框架注入<code>dylib</code>模块。</p>
+<p>​        <strong>实现步骤</strong>：外挂功能模块在被注入游戏进程后，会执行Hook操作实现外挂功能呢。制作外挂的过程中首先要你想分析游戏代码逻辑，找到一些游戏功能函数的地址，然后在外挂功能模块中通过Hook操作去挂钩相应的函数。</p>
+<p>​        底层汇编中，Hook操作可以理解为在特定的代码地址，增加跳转指令跳转到外挂制作者自定义的函数中（当前有封装的第三方库支持Hook操作：<code>substrace</code>等）</p>
+<p>​        <strong>举例说明</strong>：回调怪物的扣血函数实现秒怪；屏蔽玩家扣血函数实现无敌</p>
+<h3 id="1-2-通用工具"><a href="#1-2-通用工具" class="headerlink" title="1.2 通用工具"></a>1.2 通用工具</h3><p>​        通用工具是实现外挂跨游戏的通用外挂功能，他具体与平台和游戏引擎相关</p>
+<ul>
+<li><p><strong>内存修改器</strong></p>
+<p>​        本质是实现对指定进程的内存数据的读写。技术关键点主要在如何读写游戏的内存数据。<strong>实现方式</strong>：<strong>a.</strong> 与专用插件类似，注入一个通用功能模块到游戏进程中，根据本地<code>Socket</code>接受操作(搜索修改)，直接遍历内存等方式实现。<strong>b.</strong> 根据平台加载机制取巧实现，例如在Android平台下通过<code>/proc/[pid]/maps</code>可读写游戏的内存镜像。</p>
+</li>
+<li><p><strong>变速器</strong></p>
+<p>​        影响游戏的事件度量。游戏通常需要以帧为单位播放画面，在播放画面的过程中计算每帧动画播放所需的事件，<strong>游戏需要调用C库函数获取系统事件以供计算每帧的更新</strong>。游戏加速器可以针对不同的引擎修改不同的<code>Libc.so</code>的相关函数，例如：<code>gettimeofday</code>、<code>clock_getime</code>。修改方式同样为Hook实现，针对<code>Libc.so</code>模块的导出函数可利用导入表Hook的方式。</p>
+</li>
+<li><p><strong>按键精灵</strong></p>
+<p>​        通常调用系统<code>API</code>来发送特定操作序列，模拟用户按键。此类外挂的实现与系统的相关性较大(实现通过相应系统的<code>API</code>发送操作事件来模拟全局按键)。<strong>实现方式</strong>：Android上可通过<code>Instrumentation</code>接口的<code>sendPointerSync</code>函数实现，也可以通过具备Root权限的驱动程序调用<code>Runtime.getRuntime().exec()</code>执行<code>sendevent</code>等命令。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>模拟器</strong></p>
+<p>​        模拟器可以让玩家咋PC上运行手游。核心实现规则是基于<code>VirtualBox</code>模拟Android系统，可以直接模拟<code>X86</code>架构的Android系统。</p>
+</li>
+<li><p>抓包工具</p>
+</li>
+</ul>
+<p>​        <strong>本质是网络数据包编辑器。</strong>一类的实现方式是基于硬件（例如：让网卡处于混乱模式，即可拦截数据包）。另一类是通过Hook，针对<code>send</code>和<code>recv</code>类函数进行拦截获取网络数据包。</p>
+<h2 id="2-破解版外挂的实现原理"><a href="#2-破解版外挂的实现原理" class="headerlink" title="2. 破解版外挂的实现原理"></a>2. 破解版外挂的实现原理</h2><p>​        破解版外挂是预先静态修改后的独立游戏客户端。可分为两种：</p>
+<p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p>
+<h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p>
+<h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>手游安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏安全学习02</title>
+    <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p>
+<h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p>
+<h2 id="3-Android开发"><a href="#3-Android开发" class="headerlink" title="3. Android开发"></a>3. Android开发</h2><p>​        Android平台的游戏开发还是外挂的开发，绝大部分逻辑代码在Android平台的Native层实现，所以Android开发的最低要求需要：<strong>了解程序的生命周期以及Android平台的Native程序开发</strong>。</p>
+<h2 id="4-常用的游戏引擎"><a href="#4-常用的游戏引擎" class="headerlink" title="4. 常用的游戏引擎"></a>4. 常用的游戏引擎</h2><p>​        不同的游戏引擎用来编写游戏侏罗纪的语言、编译器可能不同，需要逆向分析的方法和工具也不一样。<code>Unity 3D</code>游戏大多采用C#开发，游戏的主逻辑大多打包在<code>Assembly-Csharp.dll</code>中，而<code>Cocos2d-x</code>游戏一般采用C++或者Lua开发。</p>
+<p>​        深入了解游戏引擎能帮助快速定位自己关心的游戏逻辑，并实现相关的外挂功能。例如：知道游戏引擎实现碰撞检测的逻辑实现，久能轻松实现穿透类、吸金类和全屏攻击类外挂。</p>
+<h2 id="5-静态分析（IDA）"><a href="#5-静态分析（IDA）" class="headerlink" title="5. 静态分析（IDA）"></a>5. 静态分析（IDA）</h2><p>​        游戏如果使用了C/C++（Android）、Objective-C（iOS）一般使用IDA静态分析。</p>
+<p>​        在Android平台下，Unity3D游戏会吧其主逻辑模块打包在<code>Assembly-Csharp.dll</code>中，需要使用<code>ILSpy</code>来反编译它，从而分析游戏逻辑。</p>
+<h2 id="6-动态调试（Android调试）"><a href="#6-动态调试（Android调试）" class="headerlink" title="6. 动态调试（Android调试）"></a>6. 动态调试（Android调试）</h2><p>​        程序加入反静态调试之后可以使用IDA进行动态调试也可以使用GDB（不太成熟，并不方便）。</p>
+<p>​        当动态分析是遇到反调试功能时，可通过静态分析找到反调试代码，并去掉改代码。一般可以动静结合。</p>
+<h2 id="7-必要了解的编程语言"><a href="#7-必要了解的编程语言" class="headerlink" title="7. 必要了解的编程语言"></a>7. 必要了解的编程语言</h2><p>​        <code>ARM</code>汇编、<code>C</code>、<code>C++</code>、<code>Objective-C</code>、<code>Java</code>、<code>smali</code>、<code>Unity 3D（C#）</code>、<code>IL</code>（C#反汇编得到的）、<code>Lua</code>（脚本语言）、<code>Python</code>（脚本语言）。</p>
+<h2 id="8-静态修改"><a href="#8-静态修改" class="headerlink" title="8. 静态修改"></a>8. 静态修改</h2><p>​        针对不同语言编写的逻辑会有不同的修改方法。</p>
+<p>​        <code>C/C++</code>、<code>Objective-C</code>编写的代码：IDA直接修改二进制文件。</p>
+<p>​        针对C#编写的逻辑：会再用ildasm反编译后，修改IL指令，然后通过<code>ilasm</code>编译成<code>DLL</code>文件，替换原安装包对应的<code>DLL</code>文件。</p>
+<h2 id="9-动态修改"><a href="#9-动态修改" class="headerlink" title="9. 动态修改"></a>9. 动态修改</h2><p>​        静态修改的弊端：有些游戏会对静态文化部做袜子性校验或者签名校验（这样以静态方式绕过校验的成本较高）如果可以动态修改，则可以绕过游戏的静态文件校验。</p>
+<p>​        动态修改游戏逻辑的方式：a.修改进曾中的内存数据b.修改进程中的代码c.调用游戏函数。</p>
+<p>​        实现上述方法的方式：一般需要讲外挂模块注入目标进程，Android中可以利用系统的机制来达到不需要注入模块就能修改数据段，之后再通过直接写进程空间的方式修改数据，可以通过<code>patch</code>代码或者动态Hook的方式修改游戏逻辑。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>手游安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>知识总结</title>
     <url>/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<span id="more"></span>
@@ -373,35 +402,6 @@
       </categories>
       <tags>
         <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏安全学习02</title>
-    <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p>
-<h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p>
-<h2 id="3-Android开发"><a href="#3-Android开发" class="headerlink" title="3. Android开发"></a>3. Android开发</h2><p>​        Android平台的游戏开发还是外挂的开发，绝大部分逻辑代码在Android平台的Native层实现，所以Android开发的最低要求需要：<strong>了解程序的生命周期以及Android平台的Native程序开发</strong>。</p>
-<h2 id="4-常用的游戏引擎"><a href="#4-常用的游戏引擎" class="headerlink" title="4. 常用的游戏引擎"></a>4. 常用的游戏引擎</h2><p>​        不同的游戏引擎用来编写游戏侏罗纪的语言、编译器可能不同，需要逆向分析的方法和工具也不一样。<code>Unity 3D</code>游戏大多采用C#开发，游戏的主逻辑大多打包在<code>Assembly-Csharp.dll</code>中，而<code>Cocos2d-x</code>游戏一般采用C++或者Lua开发。</p>
-<p>​        深入了解游戏引擎能帮助快速定位自己关心的游戏逻辑，并实现相关的外挂功能。例如：知道游戏引擎实现碰撞检测的逻辑实现，久能轻松实现穿透类、吸金类和全屏攻击类外挂。</p>
-<h2 id="5-静态分析（IDA）"><a href="#5-静态分析（IDA）" class="headerlink" title="5. 静态分析（IDA）"></a>5. 静态分析（IDA）</h2><p>​        游戏如果使用了C/C++（Android）、Objective-C（iOS）一般使用IDA静态分析。</p>
-<p>​        在Android平台下，Unity3D游戏会吧其主逻辑模块打包在<code>Assembly-Csharp.dll</code>中，需要使用<code>ILSpy</code>来反编译它，从而分析游戏逻辑。</p>
-<h2 id="6-动态调试（Android调试）"><a href="#6-动态调试（Android调试）" class="headerlink" title="6. 动态调试（Android调试）"></a>6. 动态调试（Android调试）</h2><p>​        程序加入反静态调试之后可以使用IDA进行动态调试也可以使用GDB（不太成熟，并不方便）。</p>
-<p>​        当动态分析是遇到反调试功能时，可通过静态分析找到反调试代码，并去掉改代码。一般可以动静结合。</p>
-<h2 id="7-必要了解的编程语言"><a href="#7-必要了解的编程语言" class="headerlink" title="7. 必要了解的编程语言"></a>7. 必要了解的编程语言</h2><p>​        <code>ARM</code>汇编、<code>C</code>、<code>C++</code>、<code>Objective-C</code>、<code>Java</code>、<code>smali</code>、<code>Unity 3D（C#）</code>、<code>IL</code>（C#反汇编得到的）、<code>Lua</code>（脚本语言）、<code>Python</code>（脚本语言）。</p>
-<h2 id="8-静态修改"><a href="#8-静态修改" class="headerlink" title="8. 静态修改"></a>8. 静态修改</h2><p>​        针对不同语言编写的逻辑会有不同的修改方法。</p>
-<p>​        <code>C/C++</code>、<code>Objective-C</code>编写的代码：IDA直接修改二进制文件。</p>
-<p>​        针对C#编写的逻辑：会再用ildasm反编译后，修改IL指令，然后通过<code>ilasm</code>编译成<code>DLL</code>文件，替换原安装包对应的<code>DLL</code>文件。</p>
-<h2 id="9-动态修改"><a href="#9-动态修改" class="headerlink" title="9. 动态修改"></a>9. 动态修改</h2><p>​        静态修改的弊端：有些游戏会对静态文化部做袜子性校验或者签名校验（这样以静态方式绕过校验的成本较高）如果可以动态修改，则可以绕过游戏的静态文件校验。</p>
-<p>​        动态修改游戏逻辑的方式：a.修改进曾中的内存数据b.修改进程中的代码c.调用游戏函数。</p>
-<p>​        实现上述方法的方式：一般需要讲外挂模块注入目标进程，Android中可以利用系统的机制来达到不需要注入模块就能修改数据段，之后再通过直接写进程空间的方式修改数据，可以通过<code>patch</code>代码或者动态Hook的方式修改游戏逻辑。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>手游安全</tag>
       </tags>
   </entry>
 </search>
