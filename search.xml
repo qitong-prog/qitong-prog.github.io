@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Eclipse NDK环境搭建</title>
+    <url>/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="1-需要下载的内容"><a href="#1-需要下载的内容" class="headerlink" title="1. 需要下载的内容"></a>1. 需要下载的内容</h3><ul>
+<li><p><a href="https://www.eclipse.org/downloads/">Eclipse</a></p>
+</li>
+<li><p><a href="https://www.androiddevtools.cn/">SDK\NDK\ADT</a></p>
+<p>下载时CTRL+F搜索下载内容asset_img即可，选择符合自己电脑版本</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224620323.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122235422234.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224838466.png" class="" title="image-20210121224620323.png"></li>
+</ul>
+<h3 id="2-安装下载Eclipse"><a href="#2-安装下载Eclipse" class="headerlink" title="2. 安装下载Eclipse"></a>2. 安装下载Eclipse</h3><h4 id="2-1-进入网址点击Download下载即可"><a href="#2-1-进入网址点击Download下载即可" class="headerlink" title="2.1  进入网址点击Download下载即可"></a>2.1  进入网址点击Download下载即可</h4><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222613297.png" class="" title="image-20210121224620323.png"></p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222525836.png" class="" title="image-20210121224620323.png"></p>
+<h4 id="2-2-安装Eclipse"><a href="#2-2-安装Eclipse" class="headerlink" title="2.2 安装Eclipse"></a>2.2 安装Eclipse</h4><ul>
+<li><p>双击安装程序，出现如下图所示界面选择<code>Eclipse IDE forJava Developers</code>。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222935038.png" class="" title="image-20210121224620323.png"></li>
+<li><p>选择Java环境以及eclipse安装的位置，点击第一行文件夹图标选择安装Java环境。①为本机环境，②为网上下载。如果本机有环境则可以选择本地环境地址，此处我选择网上安装JRE15.0.1。第二个文件夹图标选择你要下载安装到哪个位置。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223520833.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223716177.png" class="" title="image-20210121224620323.png"></li>
+<li><p>出现如下界面选择accept</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223917465.png" class="" title="image-20210121224620323.png"></li>
+<li><p>下载完成后先择launch启动eclipse</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224057458.png" class="" title="image-20210121224620323.png"></li>
+<li><p>启动eclipse后出现如下图所示图标，选择项目存储位置。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224338417.png" class="" title="image-20210121224620323.png"></li>
+</ul>
+<h3 id="3-给Eclipse安装ADTAndroid开发环境"><a href="#3-给Eclipse安装ADTAndroid开发环境" class="headerlink" title="3. 给Eclipse安装ADTAndroid开发环境"></a>3. 给Eclipse安装ADTAndroid开发环境</h3><h4 id="3-1-安装ADT"><a href="#3-1-安装ADT" class="headerlink" title="3.1 安装ADT"></a>3.1 安装ADT</h4><ul>
+<li><p>启动eclipse后点击<code>help</code>/<code>Install New Software</code></p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121225842829.png" class="" title="image-20210121224620323.png"></li>
+<li><p>点击Add之后出现Add Repository界面Name命名为ADT Plugin，点击Archive选择刚刚下载的ADT zip压缩包</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230234439.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230540887.png" class="" title="image-20210121224620323.png"></li>
+<li><p>选择完成后点击<code>Add</code>，选择需要下载添加的资源点击<code>两次Next</code>之后再点击选择<code>I accept the terms of the license agreements</code> 再点击<code>Finish</code>。等待下载完成即可。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230643416.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230726932.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230959219.png" class="" title="image-20210121224620323.png"></li>
+<li><p>**<code>注意 ：</code>**这里要查看右下角下载100%再退出重启，否则会下载失败。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121231054795.png" class="" title="image-20210121224620323.png"></li>
+<li><p>如果安装的很慢，可以安装时可以不选中这个复选框</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001532176.png" class="" title="image-20210121224620323.png"></li>
+</ul>
+<h4 id="3-2-Eclipse配置SDK"><a href="#3-2-Eclipse配置SDK" class="headerlink" title="3.2 Eclipse配置SDK"></a>3.2 Eclipse配置SDK</h4><ul>
+<li><p>安装完成后重启Eclipse，点击Windows/Prefrences后则会出现一个Android选项的地方。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001846060.png" class="" title="image-20210121224620323.png"></li>
+<li><p>打开之后看见Android选项，点击进入配置你的sdk环境，选择好你sdk路径后点击Apply and Close关闭即可。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002047874.png" class="" title="image-20210121224620323.png"></li>
+</ul>
+<p>**<code>注：</code>**如果添加SDK路径如下报错，在你的sdk环境中找到android-sdk-windows\tools\lib目录下plugin.prop文件，把其中的plugin版本更改为与你的ADT版本一致即可。</p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122005607311.png" class="" title="image-20210121224620323.png"></p>
+<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122010017071.png" class="" title="image-20210121224620323.png"></p>
+<h4 id="3-3-Eclipse配置NDK"><a href="#3-3-Eclipse配置NDK" class="headerlink" title="3.3 Eclipse配置NDK"></a>3.3 Eclipse配置NDK</h4><ul>
+<li><p>同样在Prefrences/Android路径下找到NDK，然后点击找到你的ndk的路径选中，点击Apply and Close结束配置。这样你的NDK就配置成功了。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002449680.png" class="" title="image-20210121224620323.png"></li>
+<li><p><code>注：</code>如果在NDK选取路径时报错Not valid NDK directory,则在该路径下创建一个ndk-build文件即可。</p>
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004355122.png" class="" title="image-20210121224620323.png">
+
+<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004504866.png" class="" title="image-20210122004504866.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ARM汇编学习总结</title>
     <url>/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<span id="more"></span>
@@ -172,78 +247,20 @@
       </tags>
   </entry>
   <entry>
-    <title>Eclipse NDK环境搭建</title>
-    <url>/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <title>日记</title>
+    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<span id="more"></span>
 
-<h3 id="1-需要下载的内容"><a href="#1-需要下载的内容" class="headerlink" title="1. 需要下载的内容"></a>1. 需要下载的内容</h3><ul>
-<li><p><a href="https://www.eclipse.org/downloads/">Eclipse</a></p>
-</li>
-<li><p><a href="https://www.androiddevtools.cn/">SDK\NDK\ADT</a></p>
-<p>下载时CTRL+F搜索下载内容asset_img即可，选择符合自己电脑版本</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224620323.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122235422234.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224838466.png" class="" title="image-20210121224620323.png"></li>
-</ul>
-<h3 id="2-安装下载Eclipse"><a href="#2-安装下载Eclipse" class="headerlink" title="2. 安装下载Eclipse"></a>2. 安装下载Eclipse</h3><h4 id="2-1-进入网址点击Download下载即可"><a href="#2-1-进入网址点击Download下载即可" class="headerlink" title="2.1  进入网址点击Download下载即可"></a>2.1  进入网址点击Download下载即可</h4><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222613297.png" class="" title="image-20210121224620323.png"></p>
-<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222525836.png" class="" title="image-20210121224620323.png"></p>
-<h4 id="2-2-安装Eclipse"><a href="#2-2-安装Eclipse" class="headerlink" title="2.2 安装Eclipse"></a>2.2 安装Eclipse</h4><ul>
-<li><p>双击安装程序，出现如下图所示界面选择<code>Eclipse IDE forJava Developers</code>。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222935038.png" class="" title="image-20210121224620323.png"></li>
-<li><p>选择Java环境以及eclipse安装的位置，点击第一行文件夹图标选择安装Java环境。①为本机环境，②为网上下载。如果本机有环境则可以选择本地环境地址，此处我选择网上安装JRE15.0.1。第二个文件夹图标选择你要下载安装到哪个位置。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223520833.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223716177.png" class="" title="image-20210121224620323.png"></li>
-<li><p>出现如下界面选择accept</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223917465.png" class="" title="image-20210121224620323.png"></li>
-<li><p>下载完成后先择launch启动eclipse</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224057458.png" class="" title="image-20210121224620323.png"></li>
-<li><p>启动eclipse后出现如下图所示图标，选择项目存储位置。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224338417.png" class="" title="image-20210121224620323.png"></li>
-</ul>
-<h3 id="3-给Eclipse安装ADTAndroid开发环境"><a href="#3-给Eclipse安装ADTAndroid开发环境" class="headerlink" title="3. 给Eclipse安装ADTAndroid开发环境"></a>3. 给Eclipse安装ADTAndroid开发环境</h3><h4 id="3-1-安装ADT"><a href="#3-1-安装ADT" class="headerlink" title="3.1 安装ADT"></a>3.1 安装ADT</h4><ul>
-<li><p>启动eclipse后点击<code>help</code>/<code>Install New Software</code></p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121225842829.png" class="" title="image-20210121224620323.png"></li>
-<li><p>点击Add之后出现Add Repository界面Name命名为ADT Plugin，点击Archive选择刚刚下载的ADT zip压缩包</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230234439.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230540887.png" class="" title="image-20210121224620323.png"></li>
-<li><p>选择完成后点击<code>Add</code>，选择需要下载添加的资源点击<code>两次Next</code>之后再点击选择<code>I accept the terms of the license agreements</code> 再点击<code>Finish</code>。等待下载完成即可。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230643416.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230726932.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230959219.png" class="" title="image-20210121224620323.png"></li>
-<li><p>**<code>注意 ：</code>**这里要查看右下角下载100%再退出重启，否则会下载失败。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121231054795.png" class="" title="image-20210121224620323.png"></li>
-<li><p>如果安装的很慢，可以安装时可以不选中这个复选框</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001532176.png" class="" title="image-20210121224620323.png"></li>
-</ul>
-<h4 id="3-2-Eclipse配置SDK"><a href="#3-2-Eclipse配置SDK" class="headerlink" title="3.2 Eclipse配置SDK"></a>3.2 Eclipse配置SDK</h4><ul>
-<li><p>安装完成后重启Eclipse，点击Windows/Prefrences后则会出现一个Android选项的地方。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001846060.png" class="" title="image-20210121224620323.png"></li>
-<li><p>打开之后看见Android选项，点击进入配置你的sdk环境，选择好你sdk路径后点击Apply and Close关闭即可。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002047874.png" class="" title="image-20210121224620323.png"></li>
-</ul>
-<p>**<code>注：</code>**如果添加SDK路径如下报错，在你的sdk环境中找到android-sdk-windows\tools\lib目录下plugin.prop文件，把其中的plugin版本更改为与你的ADT版本一致即可。</p>
-<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122005607311.png" class="" title="image-20210121224620323.png"></p>
-<p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122010017071.png" class="" title="image-20210121224620323.png"></p>
-<h4 id="3-3-Eclipse配置NDK"><a href="#3-3-Eclipse配置NDK" class="headerlink" title="3.3 Eclipse配置NDK"></a>3.3 Eclipse配置NDK</h4><ul>
-<li><p>同样在Prefrences/Android路径下找到NDK，然后点击找到你的ndk的路径选中，点击Apply and Close结束配置。这样你的NDK就配置成功了。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002449680.png" class="" title="image-20210121224620323.png"></li>
-<li><p><code>注：</code>如果在NDK选取路径时报错Not valid NDK directory,则在该路径下创建一个ndk-build文件即可。</p>
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004355122.png" class="" title="image-20210121224620323.png">
-
-<img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004504866.png" class="" title="image-20210122004504866.png"></li>
-</ul>
+<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
+<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
+<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
+<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
 ]]></content>
       <categories>
-        <category>学习</category>
+        <category>日记</category>
       </categories>
       <tags>
-        <tag>环境搭建</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
@@ -282,6 +299,35 @@
 <p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p>
 <h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p>
 <h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>手游安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏安全学习02</title>
+    <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p>
+<h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p>
+<h2 id="3-Android开发"><a href="#3-Android开发" class="headerlink" title="3. Android开发"></a>3. Android开发</h2><p>​        Android平台的游戏开发还是外挂的开发，绝大部分逻辑代码在Android平台的Native层实现，所以Android开发的最低要求需要：<strong>了解程序的生命周期以及Android平台的Native程序开发</strong>。</p>
+<h2 id="4-常用的游戏引擎"><a href="#4-常用的游戏引擎" class="headerlink" title="4. 常用的游戏引擎"></a>4. 常用的游戏引擎</h2><p>​        不同的游戏引擎用来编写游戏侏罗纪的语言、编译器可能不同，需要逆向分析的方法和工具也不一样。<code>Unity 3D</code>游戏大多采用C#开发，游戏的主逻辑大多打包在<code>Assembly-Csharp.dll</code>中，而<code>Cocos2d-x</code>游戏一般采用C++或者Lua开发。</p>
+<p>​        深入了解游戏引擎能帮助快速定位自己关心的游戏逻辑，并实现相关的外挂功能。例如：知道游戏引擎实现碰撞检测的逻辑实现，久能轻松实现穿透类、吸金类和全屏攻击类外挂。</p>
+<h2 id="5-静态分析（IDA）"><a href="#5-静态分析（IDA）" class="headerlink" title="5. 静态分析（IDA）"></a>5. 静态分析（IDA）</h2><p>​        游戏如果使用了C/C++（Android）、Objective-C（iOS）一般使用IDA静态分析。</p>
+<p>​        在Android平台下，Unity3D游戏会吧其主逻辑模块打包在<code>Assembly-Csharp.dll</code>中，需要使用<code>ILSpy</code>来反编译它，从而分析游戏逻辑。</p>
+<h2 id="6-动态调试（Android调试）"><a href="#6-动态调试（Android调试）" class="headerlink" title="6. 动态调试（Android调试）"></a>6. 动态调试（Android调试）</h2><p>​        程序加入反静态调试之后可以使用IDA进行动态调试也可以使用GDB（不太成熟，并不方便）。</p>
+<p>​        当动态分析是遇到反调试功能时，可通过静态分析找到反调试代码，并去掉改代码。一般可以动静结合。</p>
+<h2 id="7-必要了解的编程语言"><a href="#7-必要了解的编程语言" class="headerlink" title="7. 必要了解的编程语言"></a>7. 必要了解的编程语言</h2><p>​        <code>ARM</code>汇编、<code>C</code>、<code>C++</code>、<code>Objective-C</code>、<code>Java</code>、<code>smali</code>、<code>Unity 3D（C#）</code>、<code>IL</code>（C#反汇编得到的）、<code>Lua</code>（脚本语言）、<code>Python</code>（脚本语言）。</p>
+<h2 id="8-静态修改"><a href="#8-静态修改" class="headerlink" title="8. 静态修改"></a>8. 静态修改</h2><p>​        针对不同语言编写的逻辑会有不同的修改方法。</p>
+<p>​        <code>C/C++</code>、<code>Objective-C</code>编写的代码：IDA直接修改二进制文件。</p>
+<p>​        针对C#编写的逻辑：会再用ildasm反编译后，修改IL指令，然后通过<code>ilasm</code>编译成<code>DLL</code>文件，替换原安装包对应的<code>DLL</code>文件。</p>
+<h2 id="9-动态修改"><a href="#9-动态修改" class="headerlink" title="9. 动态修改"></a>9. 动态修改</h2><p>​        静态修改的弊端：有些游戏会对静态文化部做袜子性校验或者签名校验（这样以静态方式绕过校验的成本较高）如果可以动态修改，则可以绕过游戏的静态文件校验。</p>
+<p>​        动态修改游戏逻辑的方式：a.修改进曾中的内存数据b.修改进程中的代码c.调用游戏函数。</p>
+<p>​        实现上述方法的方式：一般需要讲外挂模块注入目标进程，Android中可以利用系统的机制来达到不需要注入模块就能修改数据段，之后再通过直接写进程空间的方式修改数据，可以通过<code>patch</code>代码或者动态Hook的方式修改游戏逻辑。</p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -356,52 +402,6 @@
       </categories>
       <tags>
         <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日记</title>
-    <url>/9999/01/17/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
-<h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
-<h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
-<h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏安全学习02</title>
-    <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p>
-<h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p>
-<h2 id="3-Android开发"><a href="#3-Android开发" class="headerlink" title="3. Android开发"></a>3. Android开发</h2><p>​        Android平台的游戏开发还是外挂的开发，绝大部分逻辑代码在Android平台的Native层实现，所以Android开发的最低要求需要：<strong>了解程序的生命周期以及Android平台的Native程序开发</strong>。</p>
-<h2 id="4-常用的游戏引擎"><a href="#4-常用的游戏引擎" class="headerlink" title="4. 常用的游戏引擎"></a>4. 常用的游戏引擎</h2><p>​        不同的游戏引擎用来编写游戏侏罗纪的语言、编译器可能不同，需要逆向分析的方法和工具也不一样。<code>Unity 3D</code>游戏大多采用C#开发，游戏的主逻辑大多打包在<code>Assembly-Csharp.dll</code>中，而<code>Cocos2d-x</code>游戏一般采用C++或者Lua开发。</p>
-<p>​        深入了解游戏引擎能帮助快速定位自己关心的游戏逻辑，并实现相关的外挂功能。例如：知道游戏引擎实现碰撞检测的逻辑实现，久能轻松实现穿透类、吸金类和全屏攻击类外挂。</p>
-<h2 id="5-静态分析（IDA）"><a href="#5-静态分析（IDA）" class="headerlink" title="5. 静态分析（IDA）"></a>5. 静态分析（IDA）</h2><p>​        游戏如果使用了C/C++（Android）、Objective-C（iOS）一般使用IDA静态分析。</p>
-<p>​        在Android平台下，Unity3D游戏会吧其主逻辑模块打包在<code>Assembly-Csharp.dll</code>中，需要使用<code>ILSpy</code>来反编译它，从而分析游戏逻辑。</p>
-<h2 id="6-动态调试（Android调试）"><a href="#6-动态调试（Android调试）" class="headerlink" title="6. 动态调试（Android调试）"></a>6. 动态调试（Android调试）</h2><p>​        程序加入反静态调试之后可以使用IDA进行动态调试也可以使用GDB（不太成熟，并不方便）。</p>
-<p>​        当动态分析是遇到反调试功能时，可通过静态分析找到反调试代码，并去掉改代码。一般可以动静结合。</p>
-<h2 id="7-必要了解的编程语言"><a href="#7-必要了解的编程语言" class="headerlink" title="7. 必要了解的编程语言"></a>7. 必要了解的编程语言</h2><p>​        <code>ARM</code>汇编、<code>C</code>、<code>C++</code>、<code>Objective-C</code>、<code>Java</code>、<code>smali</code>、<code>Unity 3D（C#）</code>、<code>IL</code>（C#反汇编得到的）、<code>Lua</code>（脚本语言）、<code>Python</code>（脚本语言）。</p>
-<h2 id="8-静态修改"><a href="#8-静态修改" class="headerlink" title="8. 静态修改"></a>8. 静态修改</h2><p>​        针对不同语言编写的逻辑会有不同的修改方法。</p>
-<p>​        <code>C/C++</code>、<code>Objective-C</code>编写的代码：IDA直接修改二进制文件。</p>
-<p>​        针对C#编写的逻辑：会再用ildasm反编译后，修改IL指令，然后通过<code>ilasm</code>编译成<code>DLL</code>文件，替换原安装包对应的<code>DLL</code>文件。</p>
-<h2 id="9-动态修改"><a href="#9-动态修改" class="headerlink" title="9. 动态修改"></a>9. 动态修改</h2><p>​        静态修改的弊端：有些游戏会对静态文化部做袜子性校验或者签名校验（这样以静态方式绕过校验的成本较高）如果可以动态修改，则可以绕过游戏的静态文件校验。</p>
-<p>​        动态修改游戏逻辑的方式：a.修改进曾中的内存数据b.修改进程中的代码c.调用游戏函数。</p>
-<p>​        实现上述方法的方式：一般需要讲外挂模块注入目标进程，Android中可以利用系统的机制来达到不需要注入模块就能修改数据段，之后再通过直接写进程空间的方式修改数据，可以通过<code>patch</code>代码或者动态Hook的方式修改游戏逻辑。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>手游安全</tag>
       </tags>
   </entry>
 </search>
