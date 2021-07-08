@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>QiTong&#39;s Blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-07-07T05:41:41.419Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>七筒</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EclipseNDK环境搭建</title>
+    <link href="http://example.com/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://example.com/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <published>2021-01-21T16:25:17.000Z</published>
+    <updated>2021-07-07T05:41:41.419Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h3 id="1-需要下载的内容"><a href="#1-需要下载的内容" class="headerlink" title="1. 需要下载的内容"></a>1. 需要下载的内容</h3><ul><li><p><a href="https://www.eclipse.org/downloads/">Eclipse</a></p></li><li><p><a href="https://www.androiddevtools.cn/">SDK\NDK\ADT</a></p><p>下载时CTRL+F搜索下载内容asset_img即可，选择符合自己电脑版本</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224620323.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122235422234.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224838466.png" class="" title="image-20210121224620323.png"></li></ul><h3 id="2-安装下载Eclipse"><a href="#2-安装下载Eclipse" class="headerlink" title="2. 安装下载Eclipse"></a>2. 安装下载Eclipse</h3><h4 id="2-1-进入网址点击Download下载即可"><a href="#2-1-进入网址点击Download下载即可" class="headerlink" title="2.1  进入网址点击Download下载即可"></a>2.1  进入网址点击Download下载即可</h4><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222613297.png" class="" title="image-20210121224620323.png"></p><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222525836.png" class="" title="image-20210121224620323.png"></p><h4 id="2-2-安装Eclipse"><a href="#2-2-安装Eclipse" class="headerlink" title="2.2 安装Eclipse"></a>2.2 安装Eclipse</h4><ul><li><p>双击安装程序，出现如下图所示界面选择<code>Eclipse IDE forJava Developers</code>。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121222935038.png" class="" title="image-20210121224620323.png"></li><li><p>选择Java环境以及eclipse安装的位置，点击第一行文件夹图标选择安装Java环境。①为本机环境，②为网上下载。如果本机有环境则可以选择本地环境地址，此处我选择网上安装JRE15.0.1。第二个文件夹图标选择你要下载安装到哪个位置。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223520833.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223716177.png" class="" title="image-20210121224620323.png"></li><li><p>出现如下界面选择accept</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121223917465.png" class="" title="image-20210121224620323.png"></li><li><p>下载完成后先择launch启动eclipse</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224057458.png" class="" title="image-20210121224620323.png"></li><li><p>启动eclipse后出现如下图所示图标，选择项目存储位置。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121224338417.png" class="" title="image-20210121224620323.png"></li></ul><h3 id="3-给Eclipse安装ADTAndroid开发环境"><a href="#3-给Eclipse安装ADTAndroid开发环境" class="headerlink" title="3. 给Eclipse安装ADTAndroid开发环境"></a>3. 给Eclipse安装ADTAndroid开发环境</h3><h4 id="3-1-安装ADT"><a href="#3-1-安装ADT" class="headerlink" title="3.1 安装ADT"></a>3.1 安装ADT</h4><ul><li><p>启动eclipse后点击<code>help</code>/<code>Install New Software</code></p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121225842829.png" class="" title="image-20210121224620323.png"></li><li><p>点击Add之后出现Add Repository界面Name命名为ADT Plugin，点击Archive选择刚刚下载的ADT zip压缩包</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230234439.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230540887.png" class="" title="image-20210121224620323.png"></li><li><p>选择完成后点击<code>Add</code>，选择需要下载添加的资源点击<code>两次Next</code>之后再点击选择<code>I accept the terms of the license agreements</code> 再点击<code>Finish</code>。等待下载完成即可。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230643416.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230726932.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121230959219.png" class="" title="image-20210121224620323.png"></li><li><p>**<code>注意 ：</code>**这里要查看右下角下载100%再退出重启，否则会下载失败。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210121231054795.png" class="" title="image-20210121224620323.png"></li><li><p>如果安装的很慢，可以安装时可以不选中这个复选框</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001532176.png" class="" title="image-20210121224620323.png"></li></ul><h4 id="3-2-Eclipse配置SDK"><a href="#3-2-Eclipse配置SDK" class="headerlink" title="3.2 Eclipse配置SDK"></a>3.2 Eclipse配置SDK</h4><ul><li><p>安装完成后重启Eclipse，点击Windows/Prefrences后则会出现一个Android选项的地方。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122001846060.png" class="" title="image-20210121224620323.png"></li><li><p>打开之后看见Android选项，点击进入配置你的sdk环境，选择好你sdk路径后点击Apply and Close关闭即可。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002047874.png" class="" title="image-20210121224620323.png"></li></ul><p>**<code>注：</code>**如果添加SDK路径如下报错，在你的sdk环境中找到android-sdk-windows\tools\lib目录下plugin.prop文件，把其中的plugin版本更改为与你的ADT版本一致即可。</p><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122005607311.png" class="" title="image-20210121224620323.png"></p><p>​        <img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122010017071.png" class="" title="image-20210121224620323.png"></p><h4 id="3-3-Eclipse配置NDK"><a href="#3-3-Eclipse配置NDK" class="headerlink" title="3.3 Eclipse配置NDK"></a>3.3 Eclipse配置NDK</h4><ul><li><p>同样在Prefrences/Android路径下找到NDK，然后点击找到你的ndk的路径选中，点击Apply and Close结束配置。这样你的NDK就配置成功了。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122002449680.png" class="" title="image-20210121224620323.png"></li><li><p><code>注：</code>如果在NDK选取路径时报错Not valid NDK directory,则在该路径下创建一个ndk-build文件即可。</p><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004355122.png" class="" title="image-20210121224620323.png"><img src="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20210122004504866.png" class="" title="image-20210122004504866.png"></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h3 id=&quot;1-需要下载的内容&quot;&gt;&lt;a href=&quot;#1-需要下载的内容&quot; class=&quot;headerlink&quot; title=&quot;1. 需要下载的内容&quot;&gt;&lt;/a&gt;1. 需要下载的内容&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="环境搭建" scheme="http://example.com/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识总结</title>
+    <link href="http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</id>
+    <published>2021-01-21T13:51:44.000Z</published>
+    <updated>2021-07-06T08:16:04.827Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h3 id="1-编程语言"><a href="#1-编程语言" class="headerlink" title="1. 编程语言"></a>1. 编程语言</h3><p>ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等）</p><h3 id="2-基础知识"><a href="#2-基础知识" class="headerlink" title="2. 基础知识"></a>2. 基础知识</h3><p>Android系统架构、Android四大组件、<code>JNI</code>开发、网络基础、密码学（基本加密算法）、Android Hook与注入原理、Android脱壳原理（分类脱壳总结）、网络抓包、文件格式、反破解知识、符号执行、游戏引擎、外挂基础知识等。</p><h3 id="3-分析工具"><a href="#3-分析工具" class="headerlink" title="3. 分析工具"></a>3. 分析工具</h3><ul><li><p>反编译查看</p><ul><li>JD-GUI</li><li>JADX</li><li>ByteCode Viewer</li></ul></li><li><p>编译与反编译</p><ul><li>Apktool（jar）</li><li>smali/BackSmali（jar）</li><li>jeb</li><li>ildasm</li></ul></li><li><p>动态调试器</p><ul><li>GDB</li><li>LLDB</li><li>JDB</li><li>SmaliIDEA+AndroidStudio</li></ul></li><li><p>Radare2</p></li><li><p>Hopper</p></li><li><p>IDA Pro</p></li><li><p>文件格式分析</p><ul><li>010Editor</li><li>gun binutils</li></ul></li><li><p>抓包工具</p><ul><li>WireShark</li><li>tcpdump</li><li>Fiddler</li><li>Charles</li><li>BurpSuite</li></ul></li><li><p>Hook工具</p><ul><li>frida</li><li>xposed</li></ul></li></ul><h3 id="注："><a href="#注：" class="headerlink" title="注："></a><strong><code>注</code>：</strong></h3><p>​    该处为自己需要巩固学习以及目前接触到的知识，会不定时更新。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h3 id=&quot;1-编程语言&quot;&gt;&lt;a href=&quot;#1-编程语言&quot; class=&quot;headerlink&quot; title=&quot;1. 编程语言&quot;&gt;&lt;/a&gt;1. 编程语言&lt;/h3&gt;&lt;p&gt;ARM、Java、C、C++、Python、Lua、C</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARM汇编学习总结</title>
+    <link href="http://example.com/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</id>
+    <published>2021-01-19T16:52:56.000Z</published>
+    <updated>2021-07-08T07:32:46.290Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="1-Android中ARM学习思路"><a href="#1-Android中ARM学习思路" class="headerlink" title="1. Android中ARM学习思路"></a>1. Android中ARM学习思路</h2><ul><li><p>明白安卓与ARM处理器的关系</p><p>​        Android嵌入式智能系统基于Linux内核，嵌入式系统Linux是基于ARM平台。Android程序运行基于Linux系统，并且处理器基于ARM。</p></li><li><p>ARM汇编语言程序结构</p></li><li><p>ARM指令</p></li><li><p>ARM处理器的寻址方式</p></li><li><p>ARM指令机器码</p></li></ul><h2 id="2-ARM处理器"><a href="#2-ARM处理器" class="headerlink" title="2. ARM处理器"></a>2. ARM处理器</h2><p>​        ARM是一个<strong>RISC</strong>（精简指令集）处理器。它拥有一套精简的指令集以及比CISC处理器更多的通用寄存器。<strong>ARM指令只处理寄存器中的数据</strong>，并使用了load/store结构访问存储器，也就是<strong>只有load/store指令可以访问存储器</strong>。ARM有两种运行模式（可以类比x86的实模式和保护模式），ARM模式和Thumb模式。Thumb指令可以是2或4字节的。</p><p>​        如果要加某个内存地址中保存的值，至少需要三种类型的指令（load指令、加法指令和store指令）。说明：需要使用**<code>load</code>指令将指定地址内存中的值加载到寄存器中<strong>，然后使用</strong>加法指令增加寄存器中的值<strong>，然后用</strong><code>store</code>指令将寄存器中的值写回内存**。</p><h2 id="3-RISC-精简指令集-的优劣"><a href="#3-RISC-精简指令集-的优劣" class="headerlink" title="3. RISC(精简指令集)的优劣"></a>3. RISC(精简指令集)的优劣</h2><ul><li>优</li></ul><p>可以被更快的执行。（原因：RISC处理器通过引入<strong>流水线机制</strong>，减少每个指令的占用CPU的<strong>时钟周期</strong>来缩短执行时间）。</p><p><strong>注：</strong></p><p>时钟周期：时钟周期也成为振荡周期，定义为时钟频率的倒数。<strong>时钟周期是计算机中最基本的、最小的时间单位</strong>，CPU仅完成一个最基本的动作。时钟周期是一个时间的量。时钟周期表示了SDRAM所能运行的最高频率。<strong>更小的时钟周期就意味着更高的工作效率</strong>。</p><p>流水线：流水线技术是指在程序执行时，多条指令重叠进行操作的一种任务分解术。<strong>把一个任务分解成若干顺序执行的子任务</strong>，不同的子任务由不同的执行机构来负责执行，而这些<strong>执行机构可以同时并行工作</strong>。</p><ul><li>劣</li></ul><p>较少的指令增加了软件（实际上是编译器）的复杂性。</p><h2 id="4-RISC-CISC的特点（了解）"><a href="#4-RISC-CISC的特点（了解）" class="headerlink" title="4. RISC/CISC的特点（了解）"></a>4. RISC/CISC的特点（了解）</h2><h3 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h3><ul><li><p><strong>CISC</strong></p><p>​    最初为了提高操作系统效率，选择向指令系统中添加更多、更复杂的指令来实现，导致指令集越来越大。这种类型的计算机就称为复杂指令集计算机。</p></li><li><p><strong>RISC</strong></p><p>​    对指令数据和寻址方式做精简，指令的指令周期相同，采用流水线技术，指令并行执行程度更好，这类是精简指令集计算机。</p></li></ul><h3 id="4-2-CISC主要特点"><a href="#4-2-CISC主要特点" class="headerlink" title="4.2 CISC主要特点"></a>4.2 CISC主要特点</h3><ul><li>指令数量多（100-250条）</li><li>指令使用频率相差悬殊（最常使用的是较简单的指令）</li><li>支持很多种寻址方式（通常为5-20种）</li><li>变长的指令（指令的长度不固定，变长的指令增加指令译码电路的复杂性）</li><li>指令可以对存储单元中数据直接进行处理（典型的CISC处理器通常都有指令能够直接对内存单元中的数据进行处理，执行速度较慢）</li></ul><h3 id="4-3-RISC主要特点"><a href="#4-3-RISC主要特点" class="headerlink" title="4.3 RISC主要特点"></a>4.3 RISC主要特点</h3><ul><li>指令数量少（优先选取使用频率高的一些简单指令以及常用指令，避免使用复杂指令）</li><li>指令的寻址方式少（只支持寄存器寻址方式、立即数寻址方式以及相对寻址方式）</li><li>指令长度固定，指令格式种类少</li><li>只提供load/store指令访问存储器</li><li>以硬布线逻辑控制为主</li><li>单周期指令执行</li></ul><p><strong>注：</strong></p><p><strong>硬布线</strong>：硬布线控制器是早期设计计算机的一种方法。硬布线控制器是<strong>将控制部件做成生产专门固定时序控制信号的逻辑电路</strong>，产生各种控制信号，因而又称为组合逻辑控制器。这种逻辑电路以<strong>使用最少原件和取得最高操作速度为设计目标</strong>，因为该逻辑电路又门电路和触发器构成的发杂树型网络，所以称为硬布线控制器。</p><h2 id="5-CISC和RISC对比表"><a href="#5-CISC和RISC对比表" class="headerlink" title="5. CISC和RISC对比表"></a>5. CISC和RISC对比表</h2><table><thead><tr><th></th><th>CISC</th><th>RISC</th></tr></thead><tbody><tr><td><strong>指令条数</strong></td><td>多</td><td>只选取最常见的指令</td></tr><tr><td><strong>指令复杂度</strong></td><td>高</td><td>低</td></tr><tr><td><strong>指令长度</strong></td><td>变化</td><td>短、固定</td></tr><tr><td><strong>指令执行周期</strong></td><td>随指令变化大</td><td>大多在一个机器同期完成</td></tr><tr><td><strong>指令格式</strong></td><td>复杂</td><td>简单</td></tr><tr><td><strong>寻址方式</strong></td><td>多</td><td>极少</td></tr><tr><td><strong>涉及访问主存（主存储器）指令</strong></td><td>多</td><td>极小，大部分只有两条存指令</td></tr><tr><td><strong>通用寄存器数量</strong></td><td>一般</td><td>大量</td></tr><tr><td><strong>译码方式</strong></td><td>微程序控制</td><td>硬件电路</td></tr><tr><td><strong>对编译系统要求</strong></td><td>低</td><td>高</td></tr></tbody></table><h2 id="6-ARM和x86-x64的区别"><a href="#6-ARM和x86-x64的区别" class="headerlink" title="6. ARM和x86/x64的区别"></a>6. ARM和x86/x64的区别</h2><ul><li>ARM中大多数指令可以用于分支跳转的条件判断。</li><li>Intel的x86/x64系列CPU是小端序的。</li><li>ARM架构在ARMv3知前是最小端序的之后ARM处理器提供一个配置项，可以通过配置在大端和小端之间切换。</li></ul><p><strong>注：</strong></p><p><strong>大端模式：</strong>是指<strong>数据的高字节保存在内存的低地址中，而数据的低字节保存在内存的高地址中</strong>，这样的存储模式类似于把数据当作字符串顺序处理：<strong>地址由小向大增加，数据从高位往低位放</strong>。</p><p><strong>小端模式：</strong>是指<strong>数据的高字节保存在内存的高地址中，而数据的低字节保存在内存的低地址中</strong>，这种寸处模式将地址的高低和数据位权有效地结合，<strong>高地址部分权值高，低地址部分权值低</strong>。</p><h2 id="7-ARM版本"><a href="#7-ARM版本" class="headerlink" title="7.ARM版本"></a>7.ARM版本</h2><table><thead><tr><th>内核（架构）版本</th><th>处理器版本</th></tr></thead><tbody><tr><td>ARMv1</td><td>ARM1</td></tr><tr><td>ARMv2</td><td>ARM2、ARM3</td></tr><tr><td>ARMv3</td><td>ARM6、ARM7</td></tr><tr><td>ARMv4</td><td>StrongARM、ARM7TDMI、ARM9TDMI</td></tr><tr><td>ARMv5</td><td>ARM7EJ、ARM9E、ARM10E、XScale</td></tr><tr><td>ARMv6</td><td>ARM11、ARM Cortex-M</td></tr><tr><td>ARMv7</td><td>ARM Cortex-A、ARM Cortex-M、ARM Cortex-R</td></tr><tr><td>ARMv8</td><td>ARM Cortex-A30、ARM Cortex-A50、ARM Cortex-A70</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;1-Android中ARM学习思路&quot;&gt;&lt;a href=&quot;#1-Android中ARM学习思路&quot; class=&quot;headerlink&quot; title=&quot;1. Android中ARM学习思路&quot;&gt;&lt;/a&gt;1. Androi</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="汇编" scheme="http://example.com/tags/%E6%B1%87%E7%BC%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏安全学习02</title>
+    <link href="http://example.com/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/"/>
+    <id>http://example.com/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</id>
+    <published>2021-01-18T13:42:18.000Z</published>
+    <updated>2021-07-06T08:15:58.081Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p><h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p><h2 id="3-Android开发"><a href="#3-Android开发" class="headerlink" title="3. Android开发"></a>3. Android开发</h2><p>​        Android平台的游戏开发还是外挂的开发，绝大部分逻辑代码在Android平台的Native层实现，所以Android开发的最低要求需要：<strong>了解程序的生命周期以及Android平台的Native程序开发</strong>。</p><h2 id="4-常用的游戏引擎"><a href="#4-常用的游戏引擎" class="headerlink" title="4. 常用的游戏引擎"></a>4. 常用的游戏引擎</h2><p>​        不同的游戏引擎用来编写游戏侏罗纪的语言、编译器可能不同，需要逆向分析的方法和工具也不一样。<code>Unity 3D</code>游戏大多采用C#开发，游戏的主逻辑大多打包在<code>Assembly-Csharp.dll</code>中，而<code>Cocos2d-x</code>游戏一般采用C++或者Lua开发。</p><p>​        深入了解游戏引擎能帮助快速定位自己关心的游戏逻辑，并实现相关的外挂功能。例如：知道游戏引擎实现碰撞检测的逻辑实现，久能轻松实现穿透类、吸金类和全屏攻击类外挂。</p><h2 id="5-静态分析（IDA）"><a href="#5-静态分析（IDA）" class="headerlink" title="5. 静态分析（IDA）"></a>5. 静态分析（IDA）</h2><p>​        游戏如果使用了C/C++（Android）、Objective-C（iOS）一般使用IDA静态分析。</p><p>​        在Android平台下，Unity3D游戏会吧其主逻辑模块打包在<code>Assembly-Csharp.dll</code>中，需要使用<code>ILSpy</code>来反编译它，从而分析游戏逻辑。</p><h2 id="6-动态调试（Android调试）"><a href="#6-动态调试（Android调试）" class="headerlink" title="6. 动态调试（Android调试）"></a>6. 动态调试（Android调试）</h2><p>​        程序加入反静态调试之后可以使用IDA进行动态调试也可以使用GDB（不太成熟，并不方便）。</p><p>​        当动态分析是遇到反调试功能时，可通过静态分析找到反调试代码，并去掉改代码。一般可以动静结合。</p><h2 id="7-必要了解的编程语言"><a href="#7-必要了解的编程语言" class="headerlink" title="7. 必要了解的编程语言"></a>7. 必要了解的编程语言</h2><p>​        <code>ARM</code>汇编、<code>C</code>、<code>C++</code>、<code>Objective-C</code>、<code>Java</code>、<code>smali</code>、<code>Unity 3D（C#）</code>、<code>IL</code>（C#反汇编得到的）、<code>Lua</code>（脚本语言）、<code>Python</code>（脚本语言）。</p><h2 id="8-静态修改"><a href="#8-静态修改" class="headerlink" title="8. 静态修改"></a>8. 静态修改</h2><p>​        针对不同语言编写的逻辑会有不同的修改方法。</p><p>​        <code>C/C++</code>、<code>Objective-C</code>编写的代码：IDA直接修改二进制文件。</p><p>​        针对C#编写的逻辑：会再用ildasm反编译后，修改IL指令，然后通过<code>ilasm</code>编译成<code>DLL</code>文件，替换原安装包对应的<code>DLL</code>文件。</p><h2 id="9-动态修改"><a href="#9-动态修改" class="headerlink" title="9. 动态修改"></a>9. 动态修改</h2><p>​        静态修改的弊端：有些游戏会对静态文化部做袜子性校验或者签名校验（这样以静态方式绕过校验的成本较高）如果可以动态修改，则可以绕过游戏的静态文件校验。</p><p>​        动态修改游戏逻辑的方式：a.修改进曾中的内存数据b.修改进程中的代码c.调用游戏函数。</p><p>​        实现上述方法的方式：一般需要讲外挂模块注入目标进程，Android中可以利用系统的机制来达到不需要注入模块就能修改数据段，之后再通过直接写进程空间的方式修改数据，可以通过<code>patch</code>代码或者动态Hook的方式修改游戏逻辑。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;1-ARM汇编&quot;&gt;&lt;a href=&quot;#1-ARM汇编&quot; class=&quot;headerlink&quot; title=&quot;1. ARM汇编&quot;&gt;&lt;/a&gt;1. ARM汇编&lt;/h2&gt;&lt;p&gt;​        目前全部iOS设备和Andr</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="手游安全" scheme="http://example.com/tags/%E6%89%8B%E6%B8%B8%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏安全学习01</title>
+    <link href="http://example.com/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/"/>
+    <id>http://example.com/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</id>
+    <published>2021-01-17T12:41:56.000Z</published>
+    <updated>2021-07-06T08:15:51.046Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p><h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p><p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p><p>​        <strong>注入手段</strong>：①<code>Android</code>：<code>Zygote</code>注入、<code>ptrace</code>注入技术 ；②<code>iOS</code>：利用<code>Cydia</code>框架注入<code>dylib</code>模块。</p><p>​        <strong>实现步骤</strong>：外挂功能模块在被注入游戏进程后，会执行Hook操作实现外挂功能呢。制作外挂的过程中首先要你想分析游戏代码逻辑，找到一些游戏功能函数的地址，然后在外挂功能模块中通过Hook操作去挂钩相应的函数。</p><p>​        底层汇编中，Hook操作可以理解为在特定的代码地址，增加跳转指令跳转到外挂制作者自定义的函数中（当前有封装的第三方库支持Hook操作：<code>substrace</code>等）</p><p>​        <strong>举例说明</strong>：回调怪物的扣血函数实现秒怪；屏蔽玩家扣血函数实现无敌</p><h3 id="1-2-通用工具"><a href="#1-2-通用工具" class="headerlink" title="1.2 通用工具"></a>1.2 通用工具</h3><p>​        通用工具是实现外挂跨游戏的通用外挂功能，他具体与平台和游戏引擎相关</p><ul><li><p><strong>内存修改器</strong></p><p>​        本质是实现对指定进程的内存数据的读写。技术关键点主要在如何读写游戏的内存数据。<strong>实现方式</strong>：<strong>a.</strong> 与专用插件类似，注入一个通用功能模块到游戏进程中，根据本地<code>Socket</code>接受操作(搜索修改)，直接遍历内存等方式实现。<strong>b.</strong> 根据平台加载机制取巧实现，例如在Android平台下通过<code>/proc/[pid]/maps</code>可读写游戏的内存镜像。</p></li><li><p><strong>变速器</strong></p><p>​        影响游戏的事件度量。游戏通常需要以帧为单位播放画面，在播放画面的过程中计算每帧动画播放所需的事件，<strong>游戏需要调用C库函数获取系统事件以供计算每帧的更新</strong>。游戏加速器可以针对不同的引擎修改不同的<code>Libc.so</code>的相关函数，例如：<code>gettimeofday</code>、<code>clock_getime</code>。修改方式同样为Hook实现，针对<code>Libc.so</code>模块的导出函数可利用导入表Hook的方式。</p></li><li><p><strong>按键精灵</strong></p><p>​        通常调用系统<code>API</code>来发送特定操作序列，模拟用户按键。此类外挂的实现与系统的相关性较大(实现通过相应系统的<code>API</code>发送操作事件来模拟全局按键)。<strong>实现方式</strong>：Android上可通过<code>Instrumentation</code>接口的<code>sendPointerSync</code>函数实现，也可以通过具备Root权限的驱动程序调用<code>Runtime.getRuntime().exec()</code>执行<code>sendevent</code>等命令。</p></li></ul><ul><li><p><strong>模拟器</strong></p><p>​        模拟器可以让玩家咋PC上运行手游。核心实现规则是基于<code>VirtualBox</code>模拟Android系统，可以直接模拟<code>X86</code>架构的Android系统。</p></li><li><p>抓包工具</p></li></ul><p>​        <strong>本质是网络数据包编辑器。</strong>一类的实现方式是基于硬件（例如：让网卡处于混乱模式，即可拦截数据包）。另一类是通过Hook，针对<code>send</code>和<code>recv</code>类函数进行拦截获取网络数据包。</p><h2 id="2-破解版外挂的实现原理"><a href="#2-破解版外挂的实现原理" class="headerlink" title="2. 破解版外挂的实现原理"></a>2. 破解版外挂的实现原理</h2><p>​        破解版外挂是预先静态修改后的独立游戏客户端。可分为两种：</p><p><strong>a.</strong> 脱机外挂：逆向分析游戏的网络协议后，可自行编写独立三方客户端，主要难度在于逆向分析游戏协议。 <strong>b.</strong> 游戏破解版：可以根据修改的客户端数据的不同分为逻辑代码和数据资源。</p><h3 id="2-1-逻辑代码"><a href="#2-1-逻辑代码" class="headerlink" title="2.1 逻辑代码"></a>2.1 逻辑代码</h3><p>​        Android平台中，根据游戏引擎的不同，修改的内容不同。<code>Cocos2D</code>游戏，其逻辑代码保存在so文件中，可通过IDA登工具读取和修改<code>ARM</code>、<code>Thumb</code>汇编指令；<code>Unity3D</code>游戏的C#脚本代码保存在<code>/assets/bin/Data/Managed/Assembly-CSharp.dll</code>中，可以使用<code>ildasm</code>等工具转成<code>IL</code>代码进行修改。</p><h3 id="2-2-数据资源"><a href="#2-2-数据资源" class="headerlink" title="2.2 数据资源"></a>2.2 数据资源</h3><p>​        数据资源：除代码以外的游戏客户端资源（图片资源、配置资源、音乐资源等）。纯美化版的破解版没有任何收益，更多的是通过修改资源文件去实现游戏逻辑修改。<strong>实现方式</strong>：<strong>a.</strong> 随机替换：尝试随机删除资源文件或者替换成空的或者将同类型的资源文件重命名并覆盖（例如：某飞机游戏，删除子弹资源即可实现敌机物资但的效果等）。<strong>b.</strong> 分析调试：替换方法一致，但是需要先通过静态分析和动态调试精确资源的作用和加密方式。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;1-辅助版外挂的实现原理&quot;&gt;&lt;a href=&quot;#1-辅助版外挂的实现原理&quot; class=&quot;headerlink&quot; title=&quot;1. 辅助版外挂的实现原理&quot;&gt;&lt;/a&gt;1. 辅助版外挂的实现原理&lt;/h2&gt;&lt;p&gt;​  </summary>
+      
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="手游安全" scheme="http://example.com/tags/%E6%89%8B%E6%B8%B8%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日记</title>
+    <link href="http://example.com/2021/01/17/%E6%97%A5%E8%AE%B0/"/>
+    <id>http://example.com/2021/01/17/%E6%97%A5%E8%AE%B0/</id>
+    <published>2021-01-17T07:59:44.000Z</published>
+    <updated>2021-07-08T03:48:15.301Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p><h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p><h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p><h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h3 id=&quot;2021-01-18&quot;&gt;&lt;a href=&quot;#2021-01-18&quot; class=&quot;headerlink&quot; title=&quot;2021-01-18&quot;&gt;&lt;/a&gt;2021-01-18&lt;/h3&gt;&lt;p&gt;​        今天继续</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="http://example.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="总结" scheme="http://example.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,198 +1,285 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="apple-mobile-web-app-capable" content="QiTong&#39;s Blog">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no,adress=no">
-    <meta name="browsermode" content="application">
-    <meta name="screen-orientation" content="portrait">
-    <meta name="theme-version" content="1.2.3">
-    <meta name="root" content="/">
-    <link rel="dns-prefetch" href="http://example.com">
-    <!--SEO-->
-
-<meta name="keywords" content="总结" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
 
 
-<meta name="description" content="
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/roguerabbit.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/roguerabbit.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/roguerabbit.png">
+  <link rel="mask-icon" href="/images/roguerabbit.png" color="#222">
 
-1. 编程语言ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等）
-2. 基础知识Android系统架构、Android四大组件、JNI开发、网络基础、..." />
-
-
-<meta name="robots" content="all" />
-<meta name="google" content="all" />
-<meta name="googlebot" content="all" />
-<meta name="verify" content="all" />
-    <!--Title-->
-
-<title>
-    
-    知识总结 |
-    
-    QiTong&#39;s Blog
-</title>
-
-<link rel="alternate" href="/atom.xml" title="QiTong&#39;s Blog" type="application/atom+xml">
-
-
-<link rel="icon" href="/roguerabbit.png">
-
-    
-
-
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
-<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
-<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-    
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="1. 编程语言ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等） 2. 基础知识Android系统架构、Android四大组件、JNI开发、网络基础、密码学（基本加密算法）、Android Hook与注入原理、Android脱壳原理（分类脱壳总结）、网络抓包、文件格式、反破解知识、符号执行、游戏引擎、外挂基础知识等。 3. 分析工具 反编译查看  JD-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识总结">
+<meta property="og:url" content="http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="QiTong&#39;s Blog">
+<meta property="og:description" content="1. 编程语言ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等） 2. 基础知识Android系统架构、Android四大组件、JNI开发、网络基础、密码学（基本加密算法）、Android Hook与注入原理、Android脱壳原理（分类脱壳总结）、网络抓包、文件格式、反破解知识、符号执行、游戏引擎、外挂基础知识等。 3. 分析工具 反编译查看  JD-">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-21T13:51:44.000Z">
+<meta property="article:modified_time" content="2021-07-06T08:16:04.827Z">
+<meta property="article:author" content="七筒">
+<meta property="article:tag" content="总结">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
 
 
 
-    
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/","path":"2021/01/21/知识总结/","title":"知识总结"}</script>
 
-<script>
-(function() {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>知识总结 | QiTong's Blog</title>
+  
 
-<meta name="generator" content="Hexo 5.4.0"></head>
-<!--[if lte IE 8]>
-<style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
-<![endif]-->
-<body>
-    <header class="main-header"  style="background-image:url(
-    /img/head-img.png)"
-     >
-    <div class="main-header-box">
-        <a class="header-avatar" href="/" title='七筒'>
-            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="QiTong's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">QiTong's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
-        <div class="branding">
-            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
-            
-            <h2>
-                 ʕ•ﻌ•ʔ ​
-            </h2>
-            
-        </div>
-    </div>
-</header>
-    <nav class="main-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                        <span class="sr-only"></span>
-                        <i class="fa fa-bars"></i>
-                    </span>
-                    <a class="navbar-brand" href="http://example.com">
-                        QiTong&#39;s Blog</a>
-                </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/"><i class="fa "></i>
-                                首页</a>
-                        </li>
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/about"><i class="fa "></i>
-                                关于我</a>
-                        </li>
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/PY"><i class="fa "></i>
-                                友链</a>
-                        </li>
-                        
-                        <li role="presentation" class="text-center">
-                            <a href="/archives/"><i class="fa "></i>
-                                时间轴</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+      </li>
+  </ul>
 </nav>
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="知识总结">
-            
-            知识总结
-            
-        </h1>
-        <div class="post-meta">
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            <a class="tag-none-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a>
-            
-        </span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">
-            2021/01/21</span>
-    </span>
-    
-    <span class="fa-wrap">
-        <i class="fa fa-eye"></i>
-        <span id="busuanzi_value_page_pv"></span>
-    </span>
-    
-    
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
         
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">1. 编程语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">2. 基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">3. 分析工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">注：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="七筒"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">七筒</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
         
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:2556707522@qq.com" title="E-Mail → mailto:2556707522@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
     </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="/kerne7.cn" title="kerne7.cn">Kerne7</a>
+        </li>
+    </ul>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
     
-    <div class="post-body post-content">
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="七筒">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QiTong's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          知识总结
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-21 21:51:44" itemprop="dateCreated datePublished" datetime="2021-01-21T21:51:44+08:00">2021-01-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-06 16:16:04" itemprop="dateModified" datetime="2021-07-06T16:16:04+08:00">2021-07-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
         <span id="more"></span>
 
 <h3 id="1-编程语言"><a href="#1-编程语言" class="headerlink" title="1. 编程语言"></a>1. 编程语言</h3><p>ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等）</p>
@@ -252,121 +339,87 @@
 <h3 id="注："><a href="#注：" class="headerlink" title="注："></a><strong><code>注</code>：</strong></h3><p>​    该处为自己需要巩固学习以及目前接触到的知识，会不定时更新。</p>
 
     </div>
-    
-    <div class="post-footer">
-        <div>
-            
-            转载声明：
-            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">七筒</a>
-            
-            
-        </div>
-        <div>
-            
-        </div>
-    </div>
-</article>
-<div class="article-nav prev-next-wrap clearfix">
-    
-    <a href="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="pre-post btn btn-default" title='EclipseNDK环境搭建'>
-        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-        <span class="hidden-xs">
-            EclipseNDK环境搭建</span>
-    </a>
+
     
     
-    <a href="/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="next-post btn btn-default" title='ARM汇编学习总结'>
-        <span class="hidden-lg">下一篇</span>
-        <span class="hidden-xs">
-            ARM汇编学习总结</span><i class="fa fa-angle-right fa-fw"></i>
-    </a>
     
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="七筒 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
 </div>
 
-<div id="comments">
-    
-<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-    id: decodeURI(window.location.pathname),
-    owner: "qitong-prog",
-    repo: "qitong-prog.github.io",
-    oauth: {
-        client_id: "3b54fefba821a302e97e",
-        client_secret: "da19250897e20c7b7c931e3a83a68e89db35e838"
-    },
-    perPage: "10",
-});
-gitment.render('comments');
-</script>
+          <div class="post-tags">
+              <a href="/tags/%E6%80%BB%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 总结</a>
+          </div>
 
-</div>
-
-                </main>
-                
-                    <aside id="article-toc" role="navigation" class="col-md-4">
-    <div class="widget">
-        <h3 class="title">
-            文章目录
-        </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-text">1. 编程语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">2. 基础知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7"><span class="toc-text">3. 分析工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%EF%BC%9A"><span class="toc-text">注：</span></a></li></ol>
-        
-    </div>
-</aside>
-                
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" rel="prev" title="ARM汇编学习总结">
+                  <i class="fa fa-chevron-left"></i> ARM汇编学习总结
+                </a>
             </div>
-        </div>
-    </section>
-    <footer class="main-footer">
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-</footer>
-<a id="back-to-top" class="icon-btn hide">
-    <i class="fa fa-chevron-up"></i>
-</a>
-    <div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="busuanzi">
-    
-    访问量:
-    <strong id="busuanzi_value_site_pv">
-        <i class="fa fa-spinner fa-spin"></i>
-    </strong>
-    &nbsp; | &nbsp;
-    访客数:
-    <strong id="busuanzi_value_site_uv">
-        <i class="fa fa-spinner fa-spin"></i>
-    </strong>
-    
-</div>
+            <div class="post-nav-item">
+                <a href="/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="next" title="EclipseNDK环境搭建">
+                  EclipseNDK环境搭建 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
-            <div class="col-sm-12">
-                <span>Copyright &copy;
-                    2021
-                    
-                </span> |
-                <span>
-                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> |
-                <span>
-                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
-                </span>
-            </div>
-        </div>
-    </div>
+          </div>
+    </footer>
+  </article>
 </div>
 
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-<script src="/js/app.js?rev=@@hash.js"></script>
 
-</body>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">七筒</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":330,"height":380},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
