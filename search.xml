@@ -9,7 +9,7 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">加密啦 不给看 (●'◡'●)</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">加密啦 不给看 ●'◡'●</span>
       </label>
     </div>
   </div>
@@ -372,9 +372,7 @@
   <entry>
     <title>游戏安全学习01</title>
     <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
-    <content><![CDATA[<p>​          </p>
-<span id="more"></span>
-
+    <content><![CDATA[<p>​     <span id="more"></span></p>
 <h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
 <h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
 <p>​        <strong>实现原理</strong>：利用注入技术将功能模块注入游戏进程空间中，并执行功能模块的入口函数。</p>
