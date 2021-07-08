@@ -3,9 +3,10 @@
   <entry>
     <title>日记</title>
     <url>/2021/01/17/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
-<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西  继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^</p>
+<h3 id="2021-01-18"><a href="#2021-01-18" class="headerlink" title="2021-01-18"></a>2021-01-18</h3><p>​        今天继续学习了一些关于游戏安全的知识  看的是腾讯的  “游戏安全-手游安全技术入门”  感觉写的很细致  没有废话  能学到很多东西继续好好学鸭  才看完第三章  昨晚睡的有点晚  今天也没午睡  好困  马上还停电了  晚安呀  想要进腾讯  准备下校招  加油加油  不进也没关系  好好准备了也是学到新知识了的  嘻嘻  奥尼给  ^o^（然后最终没有）</p>
 <h3 id="2021-01-19"><a href="#2021-01-19" class="headerlink" title="2021-01-19"></a>2021-01-19</h3><p>​        今天有点晚了  今天大概学习了下arm的知识吧  感觉arm相对于Intel的还是简单一些  但是也没学多少  加油学习鸭  这几天睡的有点少好困哦  但是就是自己知前学了没经常复习的下场  也是自己缺少的  朝着目标努力  嗯加油  晚安了^o^</p>
 <h3 id="2021-01-21"><a href="#2021-01-21" class="headerlink" title="2021-01-21"></a>2021-01-21</h3><p>​        今天整理了一下自己的知识  昨天没啥可写的就没更新博客 今天总结了下NDK环境的搭建吧 还总结了下自己需要复习的知识 想要之后把这些都写个总结 更新到博客 这样才能对自己差了哪些更清楚一点 环境这一块还是不想要浪费太多的时间  但是安装的过程还是要总结下的  今天也有认真工作和学习哟 加油 晚安 ^o^</p>
 <h3 id="2021-07-07"><a href="#2021-07-07" class="headerlink" title="2021-07-07"></a>2021-07-07</h3><p>​    今日是转正的第二天 加油学习呀 这个博客一定要坚持到最后哦  就确定这个博客啦 好好努力更博 嘻嘻 之前有些写的博客都不见了呜呜</p>
@@ -20,7 +21,8 @@
   <entry>
     <title>EclipseNDK环境搭建</title>
     <url>/2021/01/22/Eclipse-NDK%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
 <h3 id="1-需要下载的内容"><a href="#1-需要下载的内容" class="headerlink" title="1. 需要下载的内容"></a>1. 需要下载的内容</h3><ul>
 <li><p><a href="https://www.eclipse.org/downloads/">Eclipse</a></p>
@@ -95,7 +97,8 @@
   <entry>
     <title>知识总结</title>
     <url>/2021/01/21/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
 <h3 id="1-编程语言"><a href="#1-编程语言" class="headerlink" title="1. 编程语言"></a>1. 编程语言</h3><p>ARM、Java、C、C++、Python、Lua、C#、反汇编代码（IL、smali等）</p>
 <h3 id="2-基础知识"><a href="#2-基础知识" class="headerlink" title="2. 基础知识"></a>2. 基础知识</h3><p>Android系统架构、Android四大组件、<code>JNI</code>开发、网络基础、密码学（基本加密算法）、Android Hook与注入原理、Android脱壳原理（分类脱壳总结）、网络抓包、文件格式、反破解知识、符号执行、游戏引擎、外挂基础知识等。</p>
@@ -163,7 +166,8 @@
   <entry>
     <title>ARM汇编学习总结</title>
     <url>/2021/01/20/ARM%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
 <h2 id="1-Android中ARM学习思路"><a href="#1-Android中ARM学习思路" class="headerlink" title="1. Android中ARM学习思路"></a>1. Android中ARM学习思路</h2><ul>
 <li><p>明白安卓与ARM处理器的关系</p>
@@ -334,7 +338,8 @@
   <entry>
     <title>游戏安全学习02</title>
     <url>/2021/01/18/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A002/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
 <h2 id="1-ARM汇编"><a href="#1-ARM汇编" class="headerlink" title="1. ARM汇编"></a>1. ARM汇编</h2><p>​        目前全部iOS设备和Android设备都使用ARM架构的CPU。学习ARM汇编只需要了解常用的<strong>复制</strong>、<strong>跳转</strong>、<strong>算数运算</strong>、<strong>对战操作</strong>、<strong>内存读写</strong>指令和<strong>函数调用</strong>约定。</p>
 <h2 id="2-C、C-语言"><a href="#2-C、C-语言" class="headerlink" title="2. C、C++语言"></a>2. C、C++语言</h2><p>​        游戏引擎的侏罗纪往往会使用<code>C/C++</code>编写，并通过<code>OpenGL ES</code>来绘制界面。目前流行的<code>Coco2d-x</code>引擎可以使用多种语言逻辑编写游戏逻辑,但考虑到执行效率，开发者会优先考虑使用C/C++实现游戏逻辑，且大部分外挂由C/C++来实现相关功能。所以<strong>C/C++是极重要的</strong>技术基础。（重点关注指针的概念和使用，以及C++虚函数的调用方法）</p>
@@ -363,7 +368,8 @@
   <entry>
     <title>游戏安全学习01</title>
     <url>/2021/01/17/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A001/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>​          </p>
+<span id="more"></span>
 
 <h2 id="1-辅助版外挂的实现原理"><a href="#1-辅助版外挂的实现原理" class="headerlink" title="1. 辅助版外挂的实现原理"></a>1. 辅助版外挂的实现原理</h2><p>​        基于游戏客户端动态修改游戏数据类型的外挂</p>
 <h3 id="1-1专用插件"><a href="#1-1专用插件" class="headerlink" title="1.1专用插件"></a>1.1专用插件</h3><p>​        专用插件属于定制化外挂（每个外挂值针对一种游戏），实现形式为插件形式。</p>
