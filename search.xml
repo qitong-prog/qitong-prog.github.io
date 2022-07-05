@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/07/04/hello-world/</url>
+    <content><![CDATA[<p>new one.</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>new</tag>
+      </tags>
+  </entry>
+</search>
