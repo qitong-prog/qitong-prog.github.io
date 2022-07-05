@@ -4,45 +4,62 @@
   <url>
     <loc>http://example.com/about/index.html</loc>
     
-    <lastmod>2022-07-05T10:31:32.202Z</lastmod>
+    <lastmod>2022-07-05</lastmod>
     
-    <date>1657016212000</date>
-    <title>关于 | 七の记录</title>
-    
-    <desc></desc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/index.html</loc>
     
-    <lastmod>2022-07-05T10:31:22.903Z</lastmod>
+    <lastmod>2022-07-05</lastmod>
     
-    <date>1657016558000</date>
-    <title>分类 | 七の记录</title>
-    
-    <desc></desc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/index.html</loc>
     
-    <lastmod>2022-07-05T10:31:13.816Z</lastmod>
+    <lastmod>2022-07-05</lastmod>
     
-    <date>1657016541000</date>
-    <title>标签 | 七の记录</title>
-    
-    <desc></desc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/2022/07/04/hello-world/</loc>
     
-    <lastmod>2022-07-05T10:01:10.702Z</lastmod>
+    <lastmod>2022-07-05</lastmod>
     
-    <date>1656949430323</date>
-    <title>Hello World | 七の记录</title>
-    
-    <desc>这是一个测试</desc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>http://example.com/</loc>
+    <lastmod>2022-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://example.com/tags/new/</loc>
+    <lastmod>2022-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://example.com/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2022-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>
