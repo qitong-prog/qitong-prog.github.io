@@ -1,7 +1,7 @@
-http://example.com/posts/16107.html
-http://example.com/posts/30976.html
-http://example.com/posts/35834.html
-http://example.com/posts/12121.html
+http://example.com/posts/16107/
+http://example.com/posts/30976/
+http://example.com/posts/35834/
+http://example.com/posts/12121/
 http://example.com/guestbook/index.html
 http://example.com/about/index.html
 http://example.com/categories/index.html

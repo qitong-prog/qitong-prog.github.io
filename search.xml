@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Android逆向学习总结</title>
-    <url>/posts/30976.html</url>
+    <url>/posts/30976/</url>
     <content><![CDATA[<h3 id="常用的Android反编译工具"><a href="#常用的Android反编译工具" class="headerlink" title="常用的Android反编译工具"></a>常用的Android反编译工具</h3><ul>
 <li>jadx：反编译结构相对清晰 可以Ctrl点击跳转方法</li>
 <li>jeb：可以自动解密部分代码中加密的部分</li>
@@ -24,13 +24,13 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/posts/16107.html</url>
+    <url>/posts/16107/</url>
     <content><![CDATA[<p>之前的博客都找不見了，就重新開始吧..</p>
 ]]></content>
   </entry>
   <entry>
     <title>移动反病毒工作经验总结</title>
-    <url>/posts/35834.html</url>
+    <url>/posts/35834/</url>
     <content><![CDATA[<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h3 id="文章思路"><a href="#文章思路" class="headerlink" title="文章思路"></a>文章思路</h3><img src="/posts/35834.htm/思路.png" style="zoom:50%;">
 
 <h3 id="工作流程框架"><a href="#工作流程框架" class="headerlink" title="工作流程框架"></a>工作流程框架</h3><img src="/posts/35834.htm/日常移动特征运营流程.png" style="zoom:67%;">
@@ -137,7 +137,7 @@
   </entry>
   <entry>
     <title>讲故事之——如何入门的网安行业</title>
-    <url>/posts/12121.html</url>
+    <url>/posts/12121/</url>
     <content><![CDATA[<h2 id="复杂说下入门网安的故事"><a href="#复杂说下入门网安的故事" class="headerlink" title="复杂说下入门网安的故事"></a>复杂说下入门网安的故事</h2><h3 id="开始…"><a href="#开始…" class="headerlink" title="开始…"></a>开始…</h3><p>高中选大学专业的时候考虑的是哪个专业以后好挣钱好就业 ,当时感觉电商行业应该可以挣钱吧。就选了个关于这方面的专业——财务管理。</p>
 <p>入学了之后发现选专业的时候自己也没了解多深的吧 。上了一学期课感觉很没意思，很枯燥基本上摸鱼了整个学期，那学期期末作业做会计分录还是啥做帐本做了好久，一宿舍熬了好几个通宵才做的差不多。期末分也不高，<code>md</code>我这个时候就想 还不跑我等啥呢。之后就寻思转专业了……</p>
 <p>想起来好笑。当时想法太天真，打算转电子商务然后和我妈妈一起开网店。虽然真的转了…..可是谁知道大一下学的和财务管理大一上几乎一样的课程，这就让我纳闷住了…..。</p>
