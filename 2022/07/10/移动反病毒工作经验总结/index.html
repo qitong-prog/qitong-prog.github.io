@@ -31,8 +31,9 @@
 <meta property="og:image" content="http://example.com/2022/07/10/%E7%A7%BB%E5%8A%A8%E5%8F%8D%E7%97%85%E6%AF%92%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/思路.png">
 <meta property="og:image" content="http://example.com/2022/07/10/%E7%A7%BB%E5%8A%A8%E5%8F%8D%E7%97%85%E6%AF%92%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/日常移动特征运营流程.png">
 <meta property="og:image" content="http://example.com/2022/07/10/%E7%A7%BB%E5%8A%A8%E5%8F%8D%E7%97%85%E6%AF%92%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/%E6%8A%A5%E5%91%8A%E6%A1%86%E6%9E%B6.png">
+<meta property="og:image" content="http://example.com/2022/07/10/%E7%A7%BB%E5%8A%A8%E5%8F%8D%E7%97%85%E6%AF%92%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/image-20220719075700560.png">
 <meta property="article:published_time" content="2022-07-10T10:36:40.000Z">
-<meta property="article:modified_time" content="2022-07-18T22:39:15.305Z">
+<meta property="article:modified_time" content="2022-07-19T00:07:46.437Z">
 <meta property="article:author" content="七七">
 <meta property="article:tag" content="搬砖生活">
 <meta name="twitter:card" content="summary">
@@ -249,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-19 06:39:15" itemprop="dateModified" datetime="2022-07-19T06:39:15+08:00">2022-07-19</time>
+      <time title="修改时间：2022-07-19 08:07:46" itemprop="dateModified" datetime="2022-07-19T08:07:46+08:00">2022-07-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -288,7 +289,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
+      <span>2.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -365,20 +366,40 @@
 </li>
 </ul>
 <h3 id="工作中常用到的其他技能"><a href="#工作中常用到的其他技能" class="headerlink" title="工作中常用到的其他技能"></a>工作中常用到的其他技能</h3><ul>
-<li><p><strong>服务器的使用</strong></p>
-<p>连接服务器的话可以用<code>Xshell</code>和<code>Xftp</code>上传下载文件非常非常的方便</p>
-<p> <code>Xshell7</code>：<a href="......%5CDownload%5CXshell-7.0.0108p.exe">Xshell-7.0.0108p.exe</a> </p>
-<p><code>Xftp7</code>： <a href="......%5CDownload%5CXftp-7.0.0106p.exe">Xftp-7.0.0106p.exe</a> </p>
+<li><p>连接服务器</p>
+<ul>
+<li><p>连接服务器的话可以用<code>Xshell</code>和<code>Xftp</code>上传下载文件非常非常的方便</p>
+<p> <code>Xshell7</code>：  <a href="..%5Cdownload%5CXshell-7.0.0108p.exe">Xshell-7.0.0108p.exe</a> </p>
+<p><code>Xftp7</code>：  <a href="..%5Cdownload%5CXftp-7.0.0106p.exe">Xftp-7.0.0106p.exe</a> </p>
+</li>
+<li><p>按住win+r后输入<code>mstsc</code>输入服务器地址之后按提示进行操作</p>
+<p><img src="/2022/07/10/%E7%A7%BB%E5%8A%A8%E5%8F%8D%E7%97%85%E6%AF%92%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/image-20220719075700560.png" alt="image-20220719075700560"></p>
+</li>
+<li><p>进入<code>cmd/powershell</code>输入<code>ssh 你的用户名@服务器地址</code>后按提示操作</p>
+</li>
+</ul>
 </li>
 <li><p><strong><code>linux</code>命令</strong></p>
+<p>定时任务文件编辑：<code>crontab -e</code></p>
+<p>定时任务文件展示：<code>crontab -l</code></p>
+<p>压缩文件：<code>tar -zcvf xxx.tar (要压缩的文件)</code></p>
+<p>解压缩文件：<code>tar -zxvf xxx.tar/unzip xxx.zip</code></p>
+<p>上传文件：<code>rz</code></p>
+<p>上传并替换文件：<code>rz -y</code></p>
+<p>下载文件：<code>sz</code></p>
+<p>…</p>
 </li>
 <li><p><strong>脚本程序的编写</strong></p>
 <p>用到最多的就是python&#x2F;功能最多的话就是爬虫&#x2F;统计&#x2F;生成文件&#x2F;发送邮件&#x2F;批量下载文件</p>
 </li>
 <li><p><strong>Windows上传&#x2F;下载文件到服务器</strong></p>
-<p>与服务交互的基本命令（我感觉用上面说的俩X软件比较好用</p>
+<ul>
+<li>下载<code>lrzsz</code>：<code>yum -y install lrzsz</code>使用<code>rz</code>和<code>sz</code>命令上传或下载文件</li>
+<li>使用<code>xftp</code>软件上传下载文件</li>
+</ul>
 </li>
-<li><p><strong>代码调试</strong></p>
+<li><p><strong>代码报错解决</strong></p>
+<p>最常用的办法就是在报错点<code>print</code>相关的参数然后步步调试，还有就是报错的话仔细看报错信息。</p>
 </li>
 </ul>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>其实这个也是个很简单的过程，也没有什么技术含量吧。主要是总结一下经验，如果才步入社会的话，真的很多不清楚。其实可以多问同事的，但是可能步入工作后大家都很忙，也不会说的很详细。欢迎大家提问呢，或者我说的不对的地方也可以评论修正，一起进步。目前想到的就这些，后面想到再补充，哦还有一个就是脚本在工作中蛮重要的哈哈，因为会做到很多重复的步骤。</p>
